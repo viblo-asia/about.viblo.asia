@@ -4,7 +4,7 @@
             <h3 class="uppercase text-4xl">Chức năng <span class="font-black">chủ đạo</span></h3>
         </div>
         <div class="section-content flex flex-wrap justify-between px-8 md:px-16">
-            <div class="content-item text-left mb-8">
+            <div class="content-item text-left mb-8 w-full">
                 <h4 class="content-title uppercase flex items-center text-white">
                     <span class="content-icon p-1 mr-2 inline-block bg-white border-4 border-solid rounded-full">
                         <svg class="h-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill="#FFF" d="M15 3l-4-2v1L6 8l-2 3-1 1v6l1 1 5-2 1-1 2-3 5-7c0-1 0-2-2-3zM9 15l-2 1-1-1-2-1v-2l1-1 3 1 2 3H9z"/></svg>
@@ -18,7 +18,7 @@
                     <img src="../assets/write post.svg" alt="viet bai image" />
                 </div>
             </div>
-            <div class="content-item text-left mb-8">
+            <div class="content-item text-left mb-8 w-full">
                 <h4 class="content-title uppercase flex items-center text-white">
                     <span class="content-icon p-1 mr-2 inline-block bg-white border-4 border-solid rounded-full">
                         <svg class="h-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill="#FFF" d="M14 2l-4-1-4 1-2 4h4V5l2-1h2v3l-1 1-2 2-1 3h3v-1l1-1 1-1 2-2 1-2-2-4zm-4 13l-2 2c0 1 0 2 2 2l2-2-2-2z"/></svg>
@@ -32,7 +32,7 @@
                     <img src="../assets/quest n answer.svg" alt="viet bai image" />
                 </div>
             </div>
-            <div class="content-item text-left mb-8">
+            <div class="content-item text-left mb-8 w-full">
                 <h4 class="content-title uppercase flex items-center text-white">
                     <span class="content-icon p-1 mr-2 inline-block bg-white border-4 border-solid rounded-full">
                         <svg class="h-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill="#FFF" d="M8 2L6 5l1 2H6l1 2 1 3-3 3c-2 1-4 2-4 4v1h18v-1c0-2-2-3-4-4l-3-3 1-3 1-2h-1l1-2c0-1-1-3-3-3l1-2C9 0 9 1 8 2z"/></svg>
@@ -75,7 +75,7 @@
                     <img src="../assets/video.svg" alt="viet bai image" />
                 </div>
             </div>
-            <div class="content-item text-left mb-8">
+            <div class="content-item text-left mb-8 w-full">
                 <div class="flex">
                     <div class="w-1/2 pr-4">
                         <h4 class="content-title uppercase flex items-center text-white">
@@ -104,7 +104,7 @@
                     <img src="../assets/rate.svg" alt="viet bai image" />
                 </div>
             </div>
-            <div class="content-item text-left mb-8">
+            <div class="content-item text-left mb-8 w-full">
             </div>
         </div>
     </section>

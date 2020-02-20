@@ -126,7 +126,7 @@ $border_width: 3px;
             .content-item:nth-child(2n+1) {
                 text-align: right;
                 padding-right: 50px;
-                /*margin-bottom: 150px;*/
+                margin-bottom: 100px;
                 border-right: 6px solid $border_color;
                 right: -$border_width;
                 .item-title {}
@@ -139,7 +139,7 @@ $border_width: 3px;
             .content-item:nth-child(2n) {
                 text-align: left;
                 padding-left: 50px;
-                /*margin-top: 150px;*/
+                margin-top: 100px;
                 border-left: 6px solid $border_color;
                 left: -$border_width;
                 .item-title {}
