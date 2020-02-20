@@ -1,6 +1,6 @@
 <template>
   <section id="intro-section" class="flex items-center justify-center bg-white">
-    <div id="intro-text" class="max-w-lg md:text-lg text-md text-blue-600 lg:pt-32 pt-16 lg:pb-32 pb-16 pl-5 pr-5">
+    <div id="intro-text" class="max-w-lg text-md md:text-lg text-blue-600 pt-16 lg:pt-48 pb-16 lg:pb-48 pl-5 pr-5">
       <p><strong>Viblo</strong> (https://viblo.asia) là cộng đồng chia sẻ kiến thức về Công nghệ thông tin.</p>
 
       <p>Bạn có thể viết và chia sẻ nội dung liên quan đến các vấn đề
