@@ -79,7 +79,6 @@ export default {
       const maxCount = Math.max(...counts)
       const minCount = Math.min(...counts)
       const aveCount = (maxCount + minCount) / 2
-      console.log(aveCount)
       return this.dataCounters.map(counter => {
         if (!counter.rate) {
           counter.widthPercent = counter.count / aveCount
