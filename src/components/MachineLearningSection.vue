@@ -1,7 +1,7 @@
 <template>
   <section id="machine-learning">
     <div id="ml-container"
-      class="relative max-w-screen-xl ml-auto mr-auto h-full flex items-center justify-center md:justify-end">
+      class="relative max-w-screen-xl mx-auto h-full flex items-center justify-center md:justify-end">
       <div class="flex flex-col justify-end p-2 md:p-5 z-10">
         <div class="flex justify-end">
           <span class="p-2 md:p-5 bg-blue-600 text-white text-lg md:text-3xl uppercase">
