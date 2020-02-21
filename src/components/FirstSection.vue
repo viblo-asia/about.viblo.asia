@@ -15,7 +15,7 @@
 
     &:after {
       content: "";
-      background: url(../assets/v-pattern.svg) left bottom no-repeat;
+      background: url(../assets/v-pattern.png) left bottom no-repeat;
       mix-blend-mode: screen;
       opacity: 0.3;
       top: 0;

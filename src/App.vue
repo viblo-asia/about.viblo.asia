@@ -13,13 +13,13 @@
 </template>
 
 <script>
-import Footer from './components/Footer'
-import SectionAbout from './components/SectionAbout'
-import SectionAbility from './components/SectionAbility'
-import SectionMilestone from './components/SectionMilestone'
-import FirstSection from './components/FirstSection'
-import MachineLearningSection from './components/MachineLearningSection'
-import CounterSection from './components/CounterSection'
+const Footer = () => import('./components/Footer')
+const SectionAbout = () => import('./components/SectionAbout')
+const SectionAbility = () => import('./components/SectionAbility')
+const SectionMilestone = () => import('./components/SectionMilestone')
+const FirstSection = () => import('./components/FirstSection')
+const MachineLearningSection = () => import('./components/MachineLearningSection')
+const CounterSection = () => import('./components/CounterSection')
 
 export default {
   name: 'App',
