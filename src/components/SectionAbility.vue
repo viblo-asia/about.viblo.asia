@@ -10,7 +10,7 @@
                         <svg class="h-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill="#FFF" d="M15 3l-4-2v1L6 8l-2 3-1 1v6l1 1 5-2 1-1 2-3 5-7c0-1 0-2-2-3zM9 15l-2 1-1-1-2-1v-2l1-1 3 1 2 3H9z"/></svg>
                     </span>
                     viết bài
-                </h4>
+                </h4>z
                 <div class="content-text my-3">
                     <p>Để viết bài, bạn c hỉ cầ n nhấp chu ộ t vào nút "Crest Post" trên trang chủ Viblo hoặc b iểu tượn g cây bút đầu trang. Nhập tiêu đề, gắn fag, viết nội dung vào các mục fương ứng và đừng quên lựa chọn ngôn ngữ</p>
                 </div>
