@@ -4,8 +4,8 @@
       class="relative max-w-screen-xl ml-auto mr-auto h-full flex items-center justify-center md:justify-end">
       <div class="flex flex-col justify-end p-2 md:p-5 z-10">
         <div class="flex justify-end">
-          <span class="block md:p-5 p-2 bg-blue-600 text-white md:text-3xl text-lg uppercase">
-            <span class="font-hairline">Viblo</span> <span class="text-red-600">♥</span> <strong>Machine Learning</strong>
+          <span class="p-2 md:p-5 bg-blue-600 text-white text-lg md:text-3xl uppercase">
+            <span class="font-thin">Viblo</span> <span class="text-red-600">♥</span> <strong>Machine Learning</strong>
           </span>
         </div>
         <div id="ml-intro" class="md:mt-12 mt-8 text-blue-100 max-w-lg text-justify">
