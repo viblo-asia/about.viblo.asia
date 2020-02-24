@@ -1,10 +1,10 @@
 <template>
-  <section id="section-milstone" class="text-center py-32 px-16">
+  <section id="section-milstone" class="text-center py-32 md:px-16 max-w-full md:max-w-screen-xl m-auto">
     <div class="section-head text-center">
       <h3 class="uppercase text-4xl">Viblo <span class="font-black">milestone</span></h3>
     </div>
     <div class="section-content px-8 md:px-8 flex flex-wrap justify-between">
-      <div class="content-item w-1/2 inline-block relative" v-for="data in dataEvents" :key="data.date">
+      <div class="content-item w-full md:w-1/2 inline-block relative" v-for="data in dataEvents" :key="data.date">
         <div class="item-title text-white text-4xl inline-block relative mb-6">{{ data.date }}</div>
         <div class="item-description">{{ data.mess }}</div>
       </div>
@@ -103,9 +103,6 @@ $border_width: 3px;
   #section-milstone {
     .section-content {
       .content-item {
-        .item-title {
-          // margin-bottom: 20px;
-        }
         .item-title:before {
           content: "";
           display: block;
@@ -152,6 +149,39 @@ $border_width: 3px;
         }
         .item-title:after {
           margin-left: -50px;
+        }
+      }
+      @media (max-width: 767px) {
+        .content-item {
+          padding: 15px 0 15px 30px;
+          .item-title:after {width: calc(100% + 30px)}
+        }
+        .content-item:nth-child(2n+1) {
+          margin: 0;
+          padding-right: 0;
+          border-right: none;
+          border-left: 6px solid $border_color;
+          right: auto;
+          left: 0;
+          text-align: left;
+          .item-title:before {
+            left: -30px;
+            transform: translate(calc(-50% - 3px), 50%);
+          }
+          .item-title:after {
+            margin-left: -30px;
+          }
+        }
+        .content-item:nth-child(2n) {
+          margin: 0;
+          padding-left: 30px;
+          left: 0;
+          .item-title:before {
+            left: -30px
+          }
+          .item-title:after {
+            margin-left: -30px;
+          }
         }
       }
     }

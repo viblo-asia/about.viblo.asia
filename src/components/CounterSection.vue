@@ -95,5 +95,8 @@ export default {
 <style lang="scss" scoped>
   #counter-section {
     background: radial-gradient(#001748, #010013);
+    .counter-item .counter-chart {
+      // @media (max-width: 767px) {display: none}
+    }
   }
 </style>
