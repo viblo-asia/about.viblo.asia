@@ -31,7 +31,7 @@ export default {
             {
               title: 'viết bài',
               icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill="#FFF" d="M15 3l-4-2v1L6 8l-2 3-1 1v6l1 1 5-2 1-1 2-3 5-7c0-1 0-2-2-3zM9 15l-2 1-1-1-2-1v-2l1-1 3 1 2 3H9z"/></svg>',
-              desc: '<p>Để viết bài, bạn c hỉ cầ n nhấp chu ộ t vào nút "Crest Post" trên trang chủ Viblo hoặc b iểu tượn g cây bút đầu trang. Nhập tiêu đề, gắn fag, viết nội dung vào các mục fương ứng và đừng quên lựa chọn ngôn ngữ</p>'
+              desc: '<p>Để viết bài, bạn chỉ cần nhấp chuột vào nút "Creat Post" trên trang chủ Viblo hoặc biểu tượng cây bút đầu trang. Nhập tiêu đề, gắn tag, viết nội dung vào các mục tương ứng và đừng quên lựa chọn ngôn ngữ!</p>'
             }
           ],
           images: [
@@ -49,7 +49,7 @@ export default {
             {
               title: 'Đặt câu hỏi & trả câu hỏi',
               icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill="#FFF" d="M14 2l-4-1-4 1-2 4h4V5l2-1h2v3l-1 1-2 2-1 3h3v-1l1-1 1-1 2-2 1-2-2-4zm-4 13l-2 2c0 1 0 2 2 2l2-2-2-2z"/></svg>',
-              desc: '<p>Là một trong những tính năng chủ đạo của Viblo, đây là nỏi bạn có thể đặt câu hỏi cũng như tham gia trả lời câu hỏi của người dùng khác.</p>'
+              desc: '<p>Là một trong những tính năng chủ đạo của Viblo, đây là nơi bạn có thể đặt câu hỏi cũng như tham gia trả lời câu hỏi của người dùng khác.</p>'
             }
           ],
           images: [
@@ -67,7 +67,7 @@ export default {
             {
               title: 'Follow users',
               icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill="#FFF" d="M8 2L6 5l1 2H6l1 2 1 3-3 3c-2 1-4 2-4 4v1h18v-1c0-2-2-3-4-4l-3-3 1-3 1-2h-1l1-2c0-1-1-3-3-3l1-2C9 0 9 1 8 2z"/></svg>',
-              desc: '<p>Theo dõi một người dùng cụ thể mà bạn yêu thích để cập nhập những bài viết mới nhất từ họ, đặc biệt là những thành viên nổi bật.</p>'
+              desc: '<p>Theo dõi một người dùng cụ thể mà bạn yêu thích để cập nhật những bài viết mới nhất từ họ, đặc biệt là những thành viên nổi bật (Hot Authors).</p>'
             }
           ],
           images: [
@@ -89,7 +89,7 @@ export default {
             {
               title: 'tags',
               icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill="#FFF" d="M19 6L5 19l1-5-5 1L14 1h2l3 3v2z"/></svg>',
-              desc: '<p>Danh sách Popular tags được đặt bên phải dưới các trang, gips bạn lựa chọn và theo dõi chủ đề mình quan tâm dễ dàng</p>'
+              desc: '<p>Danh sách Popular tags được đặt bên phải dưới các trang, giúp bạn lựa chọn và theo dõi chủ đề mình quan tâm dễ dàng.</p>'
             }
           ],
           images: [
@@ -107,7 +107,7 @@ export default {
             {
               title: 'techical videos',
               icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill="#FFF" d="M15 10v1l-9 5-1-1V5l1-1 9 5v1z"/></svg>',
-              desc: '<p>Viblo Team có tiến hành ghi hình nhiều bài thuyết trình ở những sự kiện công nghệ nổi tiếng, sau khi được biên tập, các video sẽ được chia sẻ trên Viblo.</p>'
+              desc: '<p>Viblo Team có tiến hành ghi hình nhiều bài thuyết trình ở những sự kiện công nghệ nổi tiếng, sau khi được biên tập, các videos sẽ được chia sẻ trên Viblo.</p>'
             }
           ],
           images: [
@@ -130,7 +130,7 @@ export default {
             {
               title: 'clip pots',
               icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill="#FFF" d="M6 20l-4-2c-1-1-2-4 0-7L12 1l4-1 2 3-1 3-9 10-2 1-2-1 1-3 6-7h1v1l-6 7-1 1h2l9-10 1-2-2-1h-2L3 12v5c1 2 3 2 5 0L18 7h1v1L9 18l-3 2z"/></svg>',
-              desc: '<p>Clip một bài viết để xem lại khi cần thiết, bằng cách nhấn vào ô <strong>"Clip this post"</strong> phía trên bên phải của bài viết.</p>'
+              desc: '<p>Clip một bài viết để xem lại khi cần thiết, bằng cách nhấn vào ô "Clip this post" phía trên bên phải của bài viết.</p>'
             }
           ],
           images: [
