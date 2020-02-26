@@ -7,10 +7,10 @@
     </div>
     <div id="counter" class="flex flex-col mt-12 lg:mt-24">
       <div class="counter-item flex flex-1 flex-row" v-for="counter in counters" :key="counter.name">
-        <div class="counter-chart h-20 w-full border-r-2 border-blue-700 flex items-center justify-end overflow-hidden">
+        <div class="counter-chart hidden md:flex md:h-20 md:w-full md:border-r-2 md:border-blue-700 md:items-center md:justify-end md:overflow-hidden">
           <div :style="`width: ${800 * counter.widthPercent}px`" class="h-6 bg-blue-700"></div>
         </div>
-        <div class="counter-detail w-full border-blue-700 align-middle flex items-center">
+        <div class="counter-detail mb-8 last:mb-0 md:mb-0 md:w-full md:border-blue-700 md:align-middle md:flex md:items-center">
           <div class="text-white ml-4">
             <span class="font-bold text-white mr-2">{{ counter.count ? counter.count : `${counter.rate * 100}%` }}</span>
             <span class="font-light text-blue-300 uppercase">{{ counter.name }}</span>
