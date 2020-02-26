@@ -1,11 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "<%= BASE_URL %>#organization",
+            "name": "<%= htmlWebpackPlugin.options.title %>",
+            "url": "<%= BASE_URL %>",
+            "sameAs": [],
+            "logo": {
+              "@type": "ImageObject",
+              "@id": "<%= BASE_URL %>#logo",
+              "url": "<%= BASE_URL %>img/logo.svg",
+              "caption": "<%= VUE_APP_WEB_DESCRIPTION %>"
+            },
+            "image": {
+              "@id": "<%= BASE_URL %>#logo"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "<%= BASE_URL %>#website",
+            "url": "<%= BASE_URL %>",
+            "name": "<%= htmlWebpackPlugin.options.title %>",
+            "publisher": {
+              "@id": "<%= BASE_URL %>#organization"
+            },
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "<%= BASE_URL %>product/search?search={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "<%= BASE_URL %>#webpage",
+            "url": "<%= BASE_URL %>",
+            "inLanguage": "vi",
+            "name": "<%= htmlWebpackPlugin.options.title %>",
+            "isPartOf": {
+              "@id": "<%= BASE_URL %>#website"
+            },
+            "about": {
+              "@id": "<%= BASE_URL %>#organization"
+            },
+            "description": "<%= VUE_APP_WEB_DESCRIPTION %>"
+          }
+        ]
+      }
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<%= VUE_APP_GA_TRACKING_ID %>"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', '<%= VUE_APP_GA_TRACKING_ID %>');
+    </script>
   </head>
   <body>
     <noscript>
