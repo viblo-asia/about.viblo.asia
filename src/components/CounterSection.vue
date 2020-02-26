@@ -1,9 +1,9 @@
 <template>
-  <section id="counter-section" class="pt-12 pb-12 lg:pt-24 lg:pb-24">
+  <section id="counter-section" class="py-12 lg:py-24">
     <div class="flex justify-center">
       <span class="p-2 md:p-5 bg-blue-600 text-white text-lg md:text-3xl uppercase">
         <span class="font-thin">Những con số</span> <strong>ấn tượng</strong>
-        </span>
+      </span>
     </div>
     <div id="counter" class="flex flex-col mt-12 lg:mt-24">
       <div class="counter-item flex flex-1 flex-row" v-for="counter in counters" :key="counter.name">
