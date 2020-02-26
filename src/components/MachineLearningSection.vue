@@ -1,5 +1,5 @@
 <template>
-  <section id="machine-learning">
+  <section id="machine-learning" class="lg:h-screen">
     <div id="ml-container"
       class="relative max-w-screen-xl mx-auto h-full flex items-center justify-center md:justify-end">
       <div class="flex flex-col justify-end p-2 md:p-5 z-10">
@@ -25,7 +25,6 @@
 
 <style lang="scss" scoped>
   #machine-learning {
-    height: auto;
     background: linear-gradient(90deg, rgba(1,0,30,1) 0%, rgba(0,61,189,1) 100%);
     background-size: contain;
 
@@ -47,20 +46,20 @@
     }
 
     #ml-intro {
+      @apply leading-relaxed tracking-wide;
+
       & > * + *,  & li + li, & li > p + p {
         @apply mt-6;
       }
     }
-  }
 
-  @media (min-width: 1024px) {
-    #machine-learning {
-      height: 80vh;
-
+    @screen lg {
       #ml-container {
         padding: 0;
 
         &:after {
+          background: url(../assets/skull.svg) left bottom no-repeat;
+          background-size: 720px;
           opacity: 1;
         }
       }
