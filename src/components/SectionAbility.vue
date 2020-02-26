@@ -6,7 +6,7 @@
     <div class="section-content flex flex-wrap justify-between px-8 md:px-16 m-auto">
       <div v-for="data in dataFeatures" :key="data.name" class="content-item text-left mb-8 w-full" v-bind:class="data.customClass">
         <div class="flex flex-wrap">
-          <div class="w-full" v-for="itemData in data.item" :key="itemData.title" v-bind:class="data.item.length > 1 ? 'pr-4 pl-4 md:w-1/2' : ''">
+          <div class="w-full" v-for="itemData in data.item" :key="itemData.title" v-bind:class="data.item.length > 1 ? 'md:w-1/2' : ''">
             <h4 class="content-title uppercase flex items-center text-white text-xl">
               <span class="content-icon p-1 mr-2 inline-block bg-white border-4 border-solid rounded-full" v-html="itemData.icon"></span> {{ itemData.title }}
             </h4>
@@ -151,20 +151,26 @@ export default {
 
 <style lang="scss">
 #section-ability {
-  .content-title {
-    .content-icon {
-      border-color: #1B13DB;
-      svg {
-        height: 1rem;
-        path {fill: #000}
+  .content-item {
+    @media (min-width: 768px) {
+      > .flex > div:nth-child(2n+1) {padding-right: 1rem}
+      > .flex > div:nth-child(2n) {padding-left: 1rem}
+    }
+    .content-title {
+      .content-icon {
+        border-color: #1B13DB;
+        svg {
+          height: 1rem;
+          path {fill: #000}
+        }
       }
     }
-  }
-  .content-image {
-    span {
-      // max-height: 160px;
-      overflow: hidden;
-      border: 10px solid rgba(255,255,255,.1);
+    .content-image {
+      span {
+        // max-height: 160px;
+        overflow: hidden;
+        border: 10px solid rgba(255,255,255,.1);
+      }
     }
   }
 }
