@@ -1,24 +1,12 @@
 module.exports = {
-  chainWebpack: (config) => {
-    config
-      .plugin('html')
-      .tap(args => {
-        args[0].meta = {
-          viewport: 'width=device-width, initial-scale=1.0',
-          'theme-color': '#02002E',
-          description: process.env.VUE_APP_WEB_DESCRIPTION,
-          'og:url': process.env.BASE_URL,
-          'og:type': 'website',
-          'og:title': '',
-          'og:description': process.env.VUE_APP_WEB_DESCRIPTION,
-          'og:image': process.env.BASE_URL + 'favicon.ico',
-          'twitter:card': 'summary',
-          'twitter:description': process.env.VUE_APP_WEB_DESCRIPTION,
-          'twitter:title': '',
-          'twitter:image': process.env.BASE_URL + 'favicon.ico',
-          robots: 'index, follow, noodp, noydir'
-        }
-        return args
-      })
-  }
+  pages: {
+    index: {
+      entry: 'src/main.js',
+      template: 'public/index.html',
+      filename: 'index.html',
+      title: process.env.VUE_APP_WEB_TITLE,
+      chunks: ['chunk-vendors', 'chunk-common', 'index']
+    }
+  },
+  publicPath: process.env.VUE_APP_WEB_BASE_URL
 }
