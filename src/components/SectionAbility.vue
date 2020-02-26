@@ -54,7 +54,7 @@ export default {
           ],
           images: [
             {
-              image: require('../assets/quest n answer.svg'),
+              image: require('../assets/quest n answer.png'),
               class: []
             }
           ],
@@ -94,7 +94,7 @@ export default {
           ],
           images: [
             {
-              image: require('../assets/tag.svg'),
+              image: require('../assets/tag.png'),
               class: []
             }
           ],
@@ -112,7 +112,7 @@ export default {
           ],
           images: [
             {
-              image: require('../assets/video.svg'),
+              image: require('../assets/video.png'),
               class: []
             }
           ],
