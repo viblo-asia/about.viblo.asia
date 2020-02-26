@@ -11,7 +11,8 @@
     "core-js": "^3.6.4",
     "tailwindcss": "^1.2.0",
     "vue": "^2.6.11",
-    "vue-carousel-3d": "^0.2.0"
+    "vue-carousel-3d": "^0.2.0",
+    "vue-ionicons": "^3.0.4"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.0.6",
