@@ -12,7 +12,8 @@
         </div>
         <div class="counter-detail mb-8 last:mb-0 md:mb-0 md:w-full md:border-blue-700 md:align-middle md:flex md:items-center">
           <div class="text-white ml-4">
-            <span class="font-bold text-white mr-2">{{ counter.count ? counter.count : `${counter.rate * 100}%` }}</span>
+            <span class="font-bold text-white mr-2" v-if="counter.count">{{ counter.count | formatNumber }}</span>
+            <span class="font-bold text-white mr-2" v-else>{{ `${counter.rate * 100}%` }}</span>
             <span class="font-light text-blue-300 uppercase">{{ counter.name }}</span>
           </div>
         </div>
@@ -23,6 +24,7 @@
 
 <script>
 import counterItems from '@/data/counter-items'
+import numbro from 'numbro'
 
 export default {
   data () {
@@ -48,6 +50,12 @@ export default {
         }
         return counter
       })
+    }
+  },
+
+  filters: {
+    formatNumber (value) {
+      return numbro(value).format({ thousandSeparated: true })
     }
   }
 }
