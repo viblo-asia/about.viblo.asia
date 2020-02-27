@@ -1,3 +1,7 @@
+const path = require('path')
+const PrerenderSPAPlugin = require('prerender-spa-plugin')
+const Renderer = PrerenderSPAPlugin.PuppeteerRenderer
+
 module.exports = {
   pages: {
     index: {
@@ -8,5 +12,20 @@ module.exports = {
       chunks: ['chunk-vendors', 'chunk-common', 'index']
     }
   },
-  publicPath: process.env.VUE_APP_WEB_BASE_URL
+  publicPath: process.env.VUE_APP_WEB_BASE_URL,
+  configureWebpack: {
+    plugins: [
+      new PrerenderSPAPlugin({
+        staticDir: path.join(__dirname, 'dist'),
+        routes: ['/'],
+        minify: {
+          collapseBooleanAttributes: true,
+          collapseWhitespace: true,
+          decodeEntities: true,
+          keepClosingSlash: true,
+          sortAttributes: true
+        }
+      })
+    ]
+  }
 }

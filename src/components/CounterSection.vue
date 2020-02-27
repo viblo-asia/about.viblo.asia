@@ -24,7 +24,6 @@
 
 <script>
 import counterItems from '@/data/counter-items'
-import numbro from 'numbro'
 
 export default {
   data () {
@@ -55,7 +54,7 @@ export default {
 
   filters: {
     formatNumber (value) {
-      return numbro(value).format({ thousandSeparated: true })
+      return value.toLocaleString('en-US')
     }
   }
 }
