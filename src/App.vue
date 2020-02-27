@@ -9,6 +9,7 @@
       <TopSection />
       <MachineLearningSection />
       <SectionEvent />
+      <SectionCode />
     </main>
     <Footer />
   </div>
@@ -19,6 +20,7 @@ const Footer = () => import('./components/Footer')
 const SectionAbout = () => import('./components/SectionAbout')
 const SectionAbility = () => import('./components/SectionAbility')
 const SectionMilestone = () => import('./components/SectionMilestone')
+const SectionCode = () => import('./components/SectionCode')
 const FirstSection = () => import('./components/FirstSection')
 const TopSection = () => import('./components/TopSection')
 const MachineLearningSection = () => import('./components/MachineLearningSection')
@@ -32,6 +34,7 @@ export default {
     SectionAbout,
     SectionAbility,
     SectionMilestone,
+    SectionCode,
     FirstSection,
     TopSection,
     MachineLearningSection,
