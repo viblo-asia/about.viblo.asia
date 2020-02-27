@@ -1,15 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="icon" href="<%= VUE_APP_WEB_BASE_URL %>favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#02002E" />
+    <meta name="description" content="<%= VUE_APP_WEB_DESCRIPTION %>" />
+    <meta name="og:url" content="<%= VUE_APP_WEB_BASE_URL %>" />
+    <meta name="og:type" content="website" />
+    <meta name="og:title" content="<%= VUE_APP_WEB_TITLE %>" />
+    <meta name="og:description" content="<%= VUE_APP_WEB_DESCRIPTION %>/favicon.ico" />
+    <meta name="og:image" content="<%= VUE_APP_WEB_BASE_URL %>" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description" content="<%= VUE_APP_WEB_DESCRIPTION %>" />
+    <meta name="twitter:title" content="<%= VUE_APP_WEB_TITLE %>" />
+    <meta name="twitter:image" content="<%= VUE_APP_WEB_BASE_URL %>/favicon.ico" />
+    <meta name="robots" content="index, follow, noodp, noydir" />
+    
+    <title><%= VUE_APP_WEB_TITLE %></title>
+    
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "<%= VUE_APP_WEB_BASE_URL %>/#organization",
+            "name": "<%=  VUE_APP_WEB_TITLE %>",
+            "url": "<%= VUE_APP_WEB_BASE_URL %>",
+            "sameAs": [],
+            "logo": {
+              "@type": "ImageObject",
+              "@id": "<%= VUE_APP_WEB_BASE_URL %>/#logo",
+              "url": "<%= VUE_APP_WEB_BASE_URL %>/img/logo.svg",
+              "caption": "<%= VUE_APP_WEB_DESCRIPTION %>"
+            },
+            "image": {
+              "@id": "<%= VUE_APP_WEB_BASE_URL %>/#logo"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "<%= VUE_APP_WEB_BASE_URL %>/#website",
+            "url": "<%= VUE_APP_WEB_BASE_URL %>",
+            "name": "<%=  VUE_APP_WEB_TITLE %>",
+            "publisher": {
+              "@id": "<%= VUE_APP_WEB_BASE_URL %>/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "<%= VUE_APP_WEB_BASE_URL %>/#webpage",
+            "url": "<%= VUE_APP_WEB_BASE_URL %>",
+            "inLanguage": "vi",
+            "name": "<%=  VUE_APP_WEB_TITLE %>",
+            "isPartOf": {
+              "@id": "<%= VUE_APP_WEB_BASE_URL %>/#website"
+            },
+            "about": {
+              "@id": "<%= VUE_APP_WEB_BASE_URL %>/#organization"
+            },
+            "description": "<%= VUE_APP_WEB_DESCRIPTION %>"
+          }
+        ]
+      }
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<%= VUE_APP_GA_TRACKING_ID %>"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', '<%= VUE_APP_GA_TRACKING_ID %>');
+    </script>
   </head>
   <body>
     <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong>We're sorry but <%=  VUE_APP_WEB_TITLE %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->

@@ -1,7 +1,7 @@
 <template>
   <section id="section-event" class="text-center py-16 md:py-32 md:max-w-screen-xl m-auto">
     <div class="about-images">
-      <Carousel3d :autoplay="true" :autoplay-timeout="5000" :display="5" :controls-visible="true" :perspective="0" :space="300" :height="heightString">
+      <carousel-3d :autoplay="true" :autoplay-timeout="5000" :display="5" :controls-visible="true" :perspective="0" :space="300" :height="heightString">
         <slide v-for="(image, imageIndex) in dataImages" :key="image" :index="imageIndex">
           <template slot-scope="{ index, isCurrent, leftIndex, rightIndex }">
             <div class="item" ref="itemBox" :class="{ current: isCurrent, onLeft: (leftIndex >= 0), onRight: (rightIndex >= 0) }" :data-index="imageIndex">
@@ -10,7 +10,7 @@
             </div>
           </template>
         </slide>
-      </Carousel3d>
+      </carousel-3d>
     </div>
     <div class="about-content md:max-w-screen-md m-auto">
       <div class="content-contact">
