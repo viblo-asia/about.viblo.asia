@@ -1,7 +1,7 @@
 <template>
-  <section id="section-ctf" class="text-center py-16 md:py-32 bg-cover lg:bg-contain bg-right-top bg-no-repeat bg-white">
-    <div class="md:max-w-screen-xl m-auto text-white flex flex-col md:flex-row p-4 relative">
-      <div class="ctf-images mb-8">
+  <section id="section-ctf" class="text-center py-16 bg-cover bg-right-top bg-no-repeat bg-white">
+    <div class="md:max-w-screen-xl m-auto text-white flex flex-col md:flex-row px-4 relative">
+      <div class="ctf-images mb-8 md:max-w-screen-lg">
         <img src="../assets/ctf-image.png" alt="ctf image" />
       </div>
       <div class="ctf-content md:text-right md:w-2/3 md:pl-20 md:absolute md:right-0">
@@ -28,6 +28,9 @@
 <style lang="scss">
 #section-ctf {
   background-image: url('../assets/ctf-bg.png');
+  @media (min-width: 768px) {
+    background-size: 70% 100%;
+  }
   .ctf-content {
     @media (min-width: 768px) and (max-width: 1024px) {
       right: 1rem;
