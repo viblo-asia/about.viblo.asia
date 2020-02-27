@@ -10,6 +10,7 @@
       <MachineLearningSection />
       <SectionEvent />
       <SectionCode />
+      <SectionCTF />
     </main>
     <Footer />
   </div>
@@ -21,6 +22,7 @@ const SectionAbout = () => import('./components/SectionAbout')
 const SectionAbility = () => import('./components/SectionAbility')
 const SectionMilestone = () => import('./components/SectionMilestone')
 const SectionCode = () => import('./components/SectionCode')
+const SectionCTF = () => import('./components/SectionCTF')
 const FirstSection = () => import('./components/FirstSection')
 const TopSection = () => import('./components/TopSection')
 const MachineLearningSection = () => import('./components/MachineLearningSection')
@@ -35,6 +37,7 @@ export default {
     SectionAbility,
     SectionMilestone,
     SectionCode,
+    SectionCTF,
     FirstSection,
     TopSection,
     MachineLearningSection,
