@@ -1,6 +1,6 @@
 <template>
   <section id="top-section" class="py-12 lg:py-24">
-    <div class="max-w-sm lg:max-w-screen-xl mx-auto">
+    <div class="max-w-sm lg:max-w-screen-xl mx-auto lg:grid lg:grid-cols-2">
       <div class="top-item" v-for="(item, index) in topItems" :key="index">
         <div class="item-container">
           <div class="hexagon">
@@ -29,7 +29,7 @@ export default {
 
 <style lang="scss" scoped>
   .top-item {
-    @apply flex flex-1 w-full justify-start my-0 px-2;
+    @apply flex flex-1 w-full my-0 px-2;
 
     .item-container {
       @apply flex items-center;
@@ -83,49 +83,31 @@ export default {
 
   @screen md {
     .top-item {
-      @apply justify-center;
-
-      .item-container {
-        @apply relative mr-20;
-      }
 
       .hexagon {
-        @apply relative;
-        width: 170px;
-        height: 170px;
+        width: 120px;
+        height: 120px;
 
         .hexagon-content {
-          @apply text-sm tracking-wider px-6;
+          @apply text-xs tracking-wider px-2;
         }
       }
 
       .belongs-container {
-        @apply absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(0%, -50%);
 
         .connector {
-          @apply w-32;
+          @apply w-24;
         }
 
         .belongs {
-          @apply text-sm w-64;
+          @apply text-xs;
         }
       }
 
       &:nth-child(odd) {
-        @apply justify-center;
 
         .belongs-container {
           @apply flex-row-reverse;
-          left: auto;
-          right: 50%;
-          transform: translate(0%, -50%);
-        }
-
-        .item-container {
-          @apply mr-0 ml-20;
         }
       }
     }
@@ -133,10 +115,29 @@ export default {
 
   @screen lg {
     .top-item {
+      @apply ml-4 mb-4;
+
+      .hexagon {
+        width: 170px;
+        height: 170px;
+
+        .hexagon-content {
+          @apply text-sm;
+        }
+      }
+
       .belongs-container {
         .connector {
-          @apply w-64;
+          @apply w-32;
         }
+
+        .belongs {
+          @apply text-sm;
+        }
+      }
+
+      &:nth-child(odd) {
+        @apply mr-4 ml-0;
       }
     }
   }
