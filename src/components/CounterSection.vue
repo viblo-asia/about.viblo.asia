@@ -8,12 +8,16 @@
     <div id="counter" class="flex flex-col mt-12 lg:mt-24">
       <div class="counter-item flex flex-1 flex-row" v-for="counter in counters" :key="counter.name">
         <div class="counter-chart hidden md:flex md:h-20 md:w-full md:border-r-2 md:border-blue-700 md:items-center md:justify-end md:overflow-hidden">
-          <div :style="`width: ${800 * counter.widthPercent}px`" class="h-6 bg-blue-700"></div>
+          <div :style="`width: ${800 * counter.widthPercent}px`" class="h-6 flex justify-end">
+            <VueAos animation-class="w-full" :threshold="1">
+              <div class="h-full w-0 bg-blue-700 transition-all duration-3000 ease-in-out"></div>
+            </VueAos>
+          </div>
         </div>
         <div class="counter-detail mb-8 last:mb-0 md:mb-0 md:w-full md:border-blue-700 md:align-middle md:flex md:items-center">
           <div class="text-white ml-4">
-            <span class="font-bold text-white mr-2" v-if="counter.count">{{ counter.count | formatNumber }}</span>
-            <span class="font-bold text-white mr-2" v-else>{{ `${counter.rate * 100}%` }}</span>
+            <span class="font-bold text-white mr-2" v-if="counter.count"><NumberCount :numberCount="counter.count" /></span>
+            <span class="font-bold text-white mr-2" v-else>{{ counter.rate * 100 }}%</span>
             <span class="font-light text-blue-300 uppercase">{{ counter.name }}</span>
           </div>
         </div>
@@ -24,12 +28,19 @@
 
 <script>
 import counterItems from '@/data/counter-items'
+import VueAos from 'vue-aos'
+import NumberCount from './NumberCount.vue'
 
 export default {
   data () {
     return {
       dataCounters: counterItems
     }
+  },
+
+  components: {
+    VueAos,
+    NumberCount
   },
 
   computed: {
@@ -50,12 +61,6 @@ export default {
         return counter
       })
     }
-  },
-
-  filters: {
-    formatNumber (value) {
-      return value.toLocaleString('en-US')
-    }
   }
 }
 </script>
@@ -66,5 +71,9 @@ export default {
     .counter-item .counter-chart {
       // @media (max-width: 767px) {display: none}
     }
+  }
+
+  .duration-3000 {
+    transition-duration: 3000ms;
   }
 </style>

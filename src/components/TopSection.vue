@@ -2,27 +2,35 @@
   <section id="top-section" class="py-12 lg:py-24">
     <div class="max-w-sm lg:max-w-screen-xl mx-auto lg:grid lg:grid-cols-2">
       <div class="top-item" v-for="(item, index) in topItems" :key="index">
-        <div class="item-container">
-          <div class="hexagon">
-            <div class="hexagon-content" v-html="item.title"></div>
+        <VueAos animation-class="spaceInDown magictime" :threshold="1">
+          <div class="item-container">
+            <div class="hexagon">
+              <div class="hexagon-content" v-html="item.title"></div>
+            </div>
+            <div class="belongs-container">
+              <div class="connector"></div>
+              <div class="belongs" v-html="item.belongs"></div>
+            </div>
           </div>
-          <div class="belongs-container">
-            <div class="connector"></div>
-            <div class="belongs" v-html="item.belongs"></div>
-          </div>
-        </div>
+        </VueAos>
       </div>
     </div>
   </section>
 </template>
 
 <script>
+import VueAos from 'vue-aos'
 import topItems from '@/data/top-items'
+
 export default {
   data () {
     return {
       topItems: topItems
     }
+  },
+
+  components: {
+    VueAos
   }
 }
 </script>

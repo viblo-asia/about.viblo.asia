@@ -5,14 +5,20 @@
     </div>
     <div class="section-content px-8 md:px-8 flex flex-wrap justify-between">
       <div class="content-item w-full md:w-1/2 inline-block relative" v-for="data in dataEvents" :key="data.date">
-        <div class="item-title text-white text-4xl inline-block relative mb-6">{{ data.date }}</div>
-        <div class="item-description">{{ data.mess }}</div>
+        <VueAos animation-class="spaceInDown magictime" :threshold="1">
+          <div>
+            <div class="item-title text-white text-4xl inline-block relative mb-6">{{ data.date }}</div>
+            <div class="item-description">{{ data.mess }}</div>
+          </div>
+        </VueAos>
       </div>
     </div>
   </section>
 </template>
 
 <script>
+import VueAos from 'vue-aos'
+
 export default {
   data () {
     return {
@@ -91,6 +97,10 @@ export default {
         }
       ]
     }
+  },
+
+  components: {
+    VueAos
   }
 }
 </script>
