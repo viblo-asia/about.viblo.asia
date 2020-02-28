@@ -1,16 +1,23 @@
 <template>
-  <section id="section-milstone" class="text-center py-16 md:py-32 md:px-16 max-w-full md:max-w-screen-xl m-auto">
-    <div class="section-head text-center">
-      <h3 class="uppercase text-4xl">Viblo <span class="font-black">milestone</span></h3>
-    </div>
-    <div class="section-content px-8 md:px-8 flex flex-wrap justify-between">
-      <div class="content-item w-full md:w-1/2 inline-block relative" v-for="data in dataEvents" :key="data.date">
-        <VueAos animation-class="spaceInDown magictime" :threshold="1">
-          <div>
-            <div class="item-title text-white text-4xl inline-block relative mb-6">{{ data.date }}</div>
-            <div class="item-description">{{ data.mess }}</div>
+  <section id="section-milstone" class="text-center py-16 md:py-32 md:px-16">
+    <div class="max-w-full md:max-w-screen-xl m-auto">
+      <div class="section-head text-center">
+        <h3 class="uppercase text-4xl">Viblo <span class="font-black">milestone</span></h3>
+      </div>
+      <div class="section-content px-8 md:px-8 flex flex-wrap justify-between">
+        <div class="content-item w-full md:w-1/2 inline-block relative" v-for="(data, index) in dataEvents" :key="index">
+          <div class="item-title text-white text-4xl inline-block relative mb-6">{{ data.date }}
+            <template v-if="index % 2 === 0">
+              <VueAos animation-class="tinLeftIn magictime" :threshold="1"><span class="under-ruler"></span></VueAos>
+            </template>
+            <template v-else>
+              <VueAos animation-class="tinRightIn magictime" :threshold="1"><span class="under-ruler"></span></VueAos>
+            </template>
           </div>
-        </VueAos>
+          <VueAos animation-class="spaceInDown magictime" :threshold="1">
+            <div class="item-description">{{ data.mess }}</div>
+          </VueAos>
+        </div>
       </div>
     </div>
   </section>
@@ -125,7 +132,7 @@ $border_width: 3px;
           bottom: 0;
           z-index: 1;
         }
-        .item-title:after {
+        .under-ruler {
           content: "";
           display: block;
           width: calc(100% + 50px);
@@ -157,7 +164,7 @@ $border_width: 3px;
           left: -50px;
           transform: translate(calc(-50% - 3px), 50%);
         }
-        .item-title:after {
+        .under-ruler {
           margin-left: -50px;
         }
       }
@@ -178,7 +185,7 @@ $border_width: 3px;
             left: -30px;
             transform: translate(calc(-50% - 3px), 50%);
           }
-          .item-title:after {
+          .under-ruler {
             margin-left: -30px;
           }
         }
@@ -189,7 +196,7 @@ $border_width: 3px;
           .item-title:before {
             left: -30px
           }
-          .item-title:after {
+          .under-ruler {
             margin-left: -30px;
           }
         }
