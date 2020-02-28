@@ -1,9 +1,12 @@
 <template>
   <section id="first-section"
-    class="relative py-32 md:py-0 md:h-screen">
-    <div id="brand" class="flex flex-col items-center p-10 max-w-md mx-auto md:max-w-lg md:absolute z-10">
-      <img src="../assets/logo.svg" alt="Viblo Logo" id="logo" class="mb-3">
-      <div class="text-blue-300 text-center select-auto text-lg md:text-2xl md:whitespace-no-wrap"><strong>Free</strong> service for technical knowledge <strong>sharing</strong></div>
+    class="py-32 md:py-0 md:h-screen flex items-center justify-center relative">
+    <div id="brand" class="flex flex-col items-center p-10 max-w-md md:max-w-lg z-10 relative">
+      <div class="flex w-full mb-4 flex-col md:relative items-end">
+        <img src="../assets/logo.svg" alt="Viblo Logo" id="logo">
+        <span class="text-white uppercase text-xs font-bold tracking-wider md:absolute md:top-0 md:left-full">platform</span>
+      </div>
+      <div class="text-blue-300 text-center text-lg md:text-2xl md:whitespace-no-wrap"><h1><strong>Ultimate Platform</strong> for Learning and Sharing <strong>IT Knowledge</strong></h1></div>
     </div>
   </section>
 </template>
@@ -23,13 +26,11 @@
       right: 0;
       position: absolute;
     }
+  }
 
-    @screen md {
-      #brand {
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-      }
+  @responsive {
+    .left-full {
+      left: 100%;
     }
   }
 </style>
