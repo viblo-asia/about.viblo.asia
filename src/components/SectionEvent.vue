@@ -47,7 +47,7 @@ export default {
   mounted () {
     window.setTimeout(() => {
       this.matchHeight()
-    }, 300)
+    }, 400)
   },
   data () {
     return {
