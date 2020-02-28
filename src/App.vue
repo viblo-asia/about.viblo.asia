@@ -54,6 +54,7 @@ export default {
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap&subset=vietnamese');
 @import './scss/_variable.scss';
+@import '../node_modules/magic.css/dist/magic.min.css';
 
 body {
   background: #01001e;
