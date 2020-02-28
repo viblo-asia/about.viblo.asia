@@ -3,14 +3,11 @@
     <FirstSection />
     <main id="content">
       <SectionAbout />
-      <SectionAbility />
       <SectionMilestone />
       <CounterSection />
       <TopSection />
       <MachineLearningSection />
       <SectionEvent />
-      <SectionCode />
-      <SectionCTF />
     </main>
     <Footer />
   </div>
@@ -19,10 +16,7 @@
 <script>
 import Footer from './components/Footer'
 import SectionAbout from './components/SectionAbout'
-import SectionAbility from './components/SectionAbility'
 import SectionMilestone from './components/SectionMilestone'
-import SectionCode from './components/SectionCode'
-import SectionCTF from './components/SectionCTF'
 import FirstSection from './components/FirstSection'
 import TopSection from './components/TopSection'
 import MachineLearningSection from './components/MachineLearningSection'
@@ -34,10 +28,7 @@ export default {
   components: {
     Footer,
     SectionAbout,
-    SectionAbility,
     SectionMilestone,
-    SectionCode,
-    SectionCTF,
     FirstSection,
     TopSection,
     MachineLearningSection,
