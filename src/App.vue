@@ -5,6 +5,7 @@
       <SectionAbout />
       <SectionMilestone />
       <CounterSection />
+      <SectionService />
       <TopSection />
       <MachineLearningSection />
       <SectionEvent />
@@ -16,6 +17,7 @@
 <script>
 import Footer from './components/Footer'
 import SectionAbout from './components/SectionAbout'
+import SectionService from './components/SectionService'
 import SectionMilestone from './components/SectionMilestone'
 import FirstSection from './components/FirstSection'
 import TopSection from './components/TopSection'
@@ -28,6 +30,7 @@ export default {
   components: {
     Footer,
     SectionAbout,
+    SectionService,
     SectionMilestone,
     FirstSection,
     TopSection,
