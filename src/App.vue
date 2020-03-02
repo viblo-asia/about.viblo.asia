@@ -58,6 +58,7 @@ body {
 #app {
   background: $bg_color;
   color: $text_primary;
+  overflow-x: hidden;
 }
 
 .section-head {
