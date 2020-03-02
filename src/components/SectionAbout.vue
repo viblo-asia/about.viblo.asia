@@ -1,5 +1,5 @@
 <template>
-    <section id="section-about" class="text-center py-16 md:py-32 flex items-center flex-col md:flex-row relative">
+    <section id="section-about" class="text-center py-16 md:py-32 flex min-h-screen items-center flex-col md:flex-row relative">
         <div class="about-image md:order-last w-full md:w-1/2 md:z-20 relative">
           <div class="max-w-3xl"><img src="../assets/viblo app.png" alt="section about" class="m-auto max-w-full" /></div>
         </div>
