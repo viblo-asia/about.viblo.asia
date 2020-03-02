@@ -7,7 +7,7 @@
             <template slot-scope="{ index, isCurrent, leftIndex, rightIndex }">
               <div class="item" ref="itemBox" :class="{ current: isCurrent, onLeft: (leftIndex >= 0), onRight: (rightIndex >= 0) }" :data-index="imageIndex">
                 <img :src="image" alt="slider" />
-                <div class="reflection h-56 overflow-hidden relative"><img :src="image" alt="slider" /></div>
+                <div class="reflection h-56 overflow-hidden relative"><img :src="image" alt="slider" @load="onLoad" /></div>
               </div>
             </template>
           </slide>
@@ -40,14 +40,10 @@ export default {
     Slide
   },
   methods: {
-    matchHeight () {
+    onLoad () {
       this.heightString = this.$refs.itemBox[0].clientHeight
+      console.log(this.heightString)
     }
-  },
-  mounted () {
-    window.setTimeout(() => {
-      this.matchHeight()
-    }, 400)
   },
   data () {
     return {
@@ -91,7 +87,7 @@ export default {
       position: absolute;
       bottom: 0;
       left: 0;
-      background: linear-gradient(to bottom, rgba(2, 0, 46,0.7),#02002E);
+      background: linear-gradient(to bottom, rgba(2, 0, 46,0.75), rgba(2, 0, 46, .93), rgba(2, 0, 46, 1));
       z-index: 1;
     }
   }
