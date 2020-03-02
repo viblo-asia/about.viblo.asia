@@ -1,25 +1,40 @@
 <template>
     <section id="section-about" class="text-center py-16 md:py-32 flex items-center flex-col md:flex-row relative">
         <div class="about-image md:order-last w-full md:w-1/2 md:z-20 relative">
-          <div class="max-w-3xl"><img src="../assets/viblo app.png" alt="section about" class="m-auto max-w-full" /></div>
+          <VueAos animation-class="spaceInRight magictime" :threshold="0.5">
+            <div class="max-w-3xl"><img src="../assets/viblo app.png" alt="section about" class="m-auto max-w-full" /></div>
+          </VueAos>
         </div>
         <div class="about-content py-16 md:order-first w-full md:w-1/2 text-center absolute md:relative z-10">
             <div class="px-8 md:py-8 md:transform max-w-xl m-auto">
-                <h1 class="uppercase text-white text-5xl font-black">viblo</h1>
-                <div class="about-text text-center md:text-left">
-                    <p>(https://vibo.asia) là cộng đồng chia sẻ kiến thức về Công nghệ thông tin.</p>
-                    <p>Bạn có thể viết và chia sẻ nội dung liên quan đến các vấn đề kỹ
-                    thuật như: <span class="font-black">Development</span> (chủ đề lập trình,
-                    infrastructure...) <span class="font-black">Design</span> (thiết kế trong quá trình sản xuất
-                    phần mềm), <span class="font-black">QA</span> (test, đảm bảo chất lượ ng dự án...),
-                    <span class="font-black">Management</span> (quản l ý dự án).</p>
-                    <p>Hiện tại Viblo hỗ trợ viết bài bằng ngôn ngữ Tiếng Việt, Tiếng Anh và Tiếng Nhật.</p>
-                </div>
+                <VueAos animation-class="tinLeftIn magictime" :threshold="1">
+                  <h1 class="uppercase text-white text-5xl font-black">viblo</h1>
+                </VueAos>
+                <VueAos animation-class="tinLeftIn magictime" :threshold="1">
+                  <div class="about-text text-center md:text-left">
+                      <p>(https://vibo.asia) là cộng đồng chia sẻ kiến thức về Công nghệ thông tin.</p>
+                      <p>Bạn có thể viết và chia sẻ nội dung liên quan đến các vấn đề kỹ
+                      thuật như: <span class="font-black">Development</span> (chủ đề lập trình,
+                      infrastructure...) <span class="font-black">Design</span> (thiết kế trong quá trình sản xuất
+                      phần mềm), <span class="font-black">QA</span> (test, đảm bảo chất lượ ng dự án...),
+                      <span class="font-black">Management</span> (quản l ý dự án).</p>
+                      <p>Hiện tại Viblo hỗ trợ viết bài bằng ngôn ngữ Tiếng Việt, Tiếng Anh và Tiếng Nhật.</p>
+                  </div>
+                </VueAos>
             </div>
         </div>
     </section>
 </template>
 
+<script>
+import VueAos from 'vue-aos'
+
+export default {
+  components: {
+    VueAos
+  }
+}
+</script>
 <style lang="scss">
 @import '../scss/_variable.scss';
 
