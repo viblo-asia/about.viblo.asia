@@ -1,29 +1,35 @@
 <template>
   <section id="section-service" class="text-center py-16 bg-cover bg-right-top bg-no-repeat">
     <div class="md:max-w-screen-xl m-auto px-4">
-      <div class="section-head text-center">
-        <h3 class="uppercase text-4xl">Our <span class="font-black">services</span></h3>
-      </div>
+      <VueAos animation-class="puffIn magictime" :threshold="1">
+        <div class="section-head text-center">
+          <h3 class="uppercase text-4xl">Our <span class="font-black">services</span></h3>
+        </div>
+      </VueAos>
       <div class="services-list text-white px-4">
         <div class="service-item py-8 flex flex-row items-center" v-for="(service, index) in dataServices" :key="index" :class="service.code">
-          <div class="item-images hidden sm:block sm:w-1/3 md:w-1/2" :class="(index + 1) % 2 !== 0 ? '' : 'md:order-last'">
-            <div class="images relative">
-              <!-- <div class="image"><img :src="service.logo" :alt="service.title" /></div> -->
-              <div class="image" v-for="image in service.images" :key="image">
-                <img :src="image" :alt="service.title" />
+          <VueAos :threshold="1" :animation-class="index % 2 === 0 ? 'slideLeftReturn magictime' : 'slideRightReturn magictime'">
+            <div class="item-images hidden sm:block sm:w-1/3 md:w-1/2" :class="index % 2 === 0 ? '' : 'md:order-last'">
+              <div class="images relative">
+                <!-- <div class="image"><img :src="service.logo" :alt="service.title" /></div> -->
+                <div class="image" v-for="image in service.images" :key="image">
+                  <img :src="image" :alt="service.title" />
+                </div>
               </div>
             </div>
-          </div>
-          <div class="item-content w-full sm:w-2/3 md:w-1/2 text-center sm:text-left pl-4 md:pl-0" :class="(index + 1) % 2 === 0 ? 'md:order-first' : 'md:text-right'">
-            <div class="logo"><img class="inline-block max-w-lg w-full" :src="service.logo" :alt="service.title" /></div>
-            <div class="title mb-4 text-2xl lg:text-4xl font-bold">
-              <!-- <h3 class="uppercase">{{ service.title }}</h3> -->
+          </VueAos>
+          <VueAos :threshold="1" :animation-class="index % 2 !== 0 ? 'slideLeftReturn magictime' : 'slideRightReturn magictime'">
+            <div class="item-content w-full sm:w-2/3 md:w-1/2 text-center sm:text-left pl-4 md:pl-0" :class="index % 2 !== 0 ? 'md:order-first' : 'md:text-right'">
+              <div class="logo"><img class="inline-block max-w-lg w-full" :src="service.logo" :alt="service.title" /></div>
+              <div class="title mb-4 text-2xl lg:text-4xl font-bold">
+                <!-- <h3 class="uppercase">{{ service.title }}</h3> -->
+              </div>
+              <div class="description text-lg lg:text-2xl mb-4" v-html="service.description"></div>
+              <div class="link">
+                <a :href="service.link" class="button rounded-full py-2 px-4 sm:px-16 inline-block">Go to {{ service.title }}</a>
+              </div>
             </div>
-            <div class="description text-lg lg:text-2xl mb-4" v-html="service.description"></div>
-            <div class="link">
-              <a :href="service.link" class="button rounded-full py-2 px-4 sm:px-16 inline-block">Go to {{ service.title }}</a>
-            </div>
-          </div>
+          </VueAos>
         </div>
       </div>
     </div>
@@ -31,6 +37,8 @@
 </template>
 
 <script>
+import VueAos from 'vue-aos'
+
 export default {
   data () {
     return {
@@ -69,6 +77,10 @@ export default {
         }
       ]
     }
+  },
+
+  components: {
+    VueAos
   }
 }
 </script>
