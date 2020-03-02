@@ -34,10 +34,4 @@
       }
     }
   }
-
-  @responsive {
-    .min-h-screen {
-      min-height: 100vh;
-    }
-  }
 </style>
