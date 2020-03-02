@@ -67,26 +67,6 @@ export default {
         @apply uppercase text-xs text-blue-600 flex-shrink;
       }
     }
-
-    &:nth-child(odd) {
-      @apply justify-end;
-
-      .item-container {
-        @apply flex-row-reverse;
-
-        .belongs-container {
-          @apply flex-row-reverse;
-
-          .connector {
-            @apply mr-0 ml-2;
-          }
-
-          .belongs {
-            @apply text-right;
-          }
-        }
-      }
-    }
   }
 
   @screen md {
@@ -109,13 +89,6 @@ export default {
 
         .belongs {
           @apply text-xs;
-        }
-      }
-
-      &:nth-child(odd) {
-
-        .belongs-container {
-          @apply flex-row-reverse;
         }
       }
     }
@@ -145,7 +118,19 @@ export default {
       }
 
       &:nth-child(odd) {
-        @apply mr-4 ml-0;
+        @apply mr-4 ml-0 justify-end;
+
+        .item-container {
+          @apply flex-row-reverse;
+
+          .belongs-container {
+            @apply flex-row-reverse;
+
+            .belongs {
+              @apply text-right;
+            }
+          }
+        }
       }
     }
   }
