@@ -7,22 +7,22 @@
         </div>
       </VueAos>
       <div class="services-list text-white px-4">
-        <div class="service-item py-8 flex flex-row items-center" v-for="(service, index) in dataServices" :key="index" :class="service.code">
-          <VueAos :threshold="1" :animation-class="index % 2 === 0 ? 'slideLeftReturn magictime' : 'slideRightReturn magictime'">
-            <div class="item-images hidden sm:block sm:w-1/3 md:w-1/2" :class="index % 2 === 0 ? '' : 'md:order-last'">
-              <div class="images relative">
+        <div class="service-item py-20 md:py-16 flex flex-row items-center relative" v-for="(service, index) in dataServices" :key="index" :class="service.code">
+          <VueAos :animation-class="index % 2 === 0 ? 'slideLeftReturn magictime' : 'slideRightReturn magictime'">
+            <div class="item-images absolute sm:relative overflow-hidden sm:block sm:w-1/3 md:w-1/2 inset-0 flex items-center justify-center" :class="index % 2 === 0 ? '' : 'md:order-last'">
+              <div class="images py-8 md:py-0 h-full">
                 <!-- <div class="image"><img :src="service.logo" :alt="service.title" /></div> -->
-                <div class="image" v-for="image in service.images" :key="image">
-                  <img :src="image" :alt="service.title" />
+                <div class="image h-full" v-for="image in service.images" :key="image">
+                  <img :src="image" :alt="service.title" class="w-auto m-auto" />
                 </div>
               </div>
             </div>
           </VueAos>
-          <VueAos :threshold="1" :animation-class="index % 2 !== 0 ? 'slideLeftReturn magictime' : 'slideRightReturn magictime'">
-            <div class="item-content w-full sm:w-2/3 md:w-1/2 text-center sm:text-left pl-4 md:pl-0" :class="index % 2 !== 0 ? 'md:order-first' : 'md:text-right'">
-              <div class="logo"><img class="inline-block max-w-lg w-full" :src="service.logo" :alt="service.title" /></div>
-              <div class="title mb-4 text-2xl lg:text-4xl font-bold">
-                <!-- <h3 class="uppercase">{{ service.title }}</h3> -->
+          <VueAos :animation-class="index % 2 !== 0 ? 'slideLeftReturn magictime' : 'slideRightReturn magictime'">
+            <div class="item-content w-full sm:w-2/3 md:w-1/2 text-center sm:text-left sm:pl-4 md:pl-0 z-10" :class="index % 2 !== 0 ? 'md:order-first' : 'md:text-right'">
+              <div class="logo mb-4"><img class="inline-block max-w-full md:max-w-lg md:h-20" :src="service.logo" :alt="service.title" /></div>
+              <div class="title mb-4 text-2xl lg:text-4xl font-bold hidden">
+                <h3 class="uppercase">{{ service.title }}</h3>
               </div>
               <div class="description text-lg lg:text-2xl mb-4" v-html="service.description"></div>
               <div class="link">
@@ -43,6 +43,17 @@ export default {
   data () {
     return {
       dataServices: [
+        {
+          title: 'Viblo',
+          code: 'v-viblo',
+          description: '<h4 class="uppercase font-bold title">Learning to code?<br>Preparing for an interview?</h4><p>Or just want to have fun with challenging problems?</p>',
+          logo: require('../assets/logo.svg'),
+          link: 'javascript:void(0)',
+          images: [
+            require('../assets/code-image.png')
+            // require('../assets/code-bg.png')
+          ]
+        },
         {
           title: 'Viblo Code',
           code: 'v-code',
@@ -93,12 +104,44 @@ export default {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#02002e', endColorstr='#0002002e',GradientType=0 ); /* IE6-9 */
 
   .service-item {
-    .logo {
-      transition: all .2s ease-in-out;
+    .item-images {
+      @media (max-width: 640px) {
+        :after {
+          content: '';
+          width: 100%;
+          height: 100%;
+          background-color: rgba(1, 0, 45, .6);
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1
+        }
+      }
+      .images {
+        img {
+          max-height: 25rem;
+        }
+      }
     }
-    .link .button {
-      background-color: #3ec08d;
+    .item-content {
+      @media (max-width: 640px) {
+        // background-color: rgba(0,0,0,.7)
+      }
+      .logo {
+        img {max-height: 5rem}
+      }
+      .link .button {
+        background-color: #3ec08d;
+      }
     }
   }
+  .service-item.v-viblo .link .button {background-color: #3ec08d;}
+  .service-item.v-code .link .button {background-color: #3E6F8D}
+  .service-item.v-ctf .link .button {
+    background-color: #97F739;
+    color: #F05D32;
+  }
+  .service-item.v-cv .link .button {background-color: #F5861E}
 }
 </style>
