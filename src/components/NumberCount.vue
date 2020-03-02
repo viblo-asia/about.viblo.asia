@@ -1,29 +1,23 @@
 <template>
-  <Intersect @enter.once="startCounting">
   <span>
     {{ numberShow | formatNumber }}
   </span>
-  </Intersect>
 </template>
 
 <script>
-import Intersect from 'vue-intersect'
+import EventBus from '@/includes/event-bus'
 
 export default {
   data () {
     return {
       numberShow: 0,
       startTime: null,
-      animateTime: 3000
+      animateTime: 1000
     }
   },
 
   props: {
     numberCount: Number
-  },
-
-  components: {
-    Intersect
   },
 
   methods: {
@@ -47,6 +41,12 @@ export default {
         this.numberShow = this.numberCount
       }
     }
+  },
+
+  mounted () {
+    EventBus.$on('start-counting', () => {
+      this.startCounting()
+    })
   },
 
   filters: {
