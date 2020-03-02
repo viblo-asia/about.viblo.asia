@@ -1,4 +1,5 @@
 <template>
+ <Intersect @enter.once="startAnimation" :threshold="[0.6]">
   <section id="counter-section" class="py-12 lg:py-24">
     <div class="flex justify-center">
       <span class="p-2 md:p-5 bg-blue-600 text-white text-lg md:text-3xl uppercase">
@@ -7,11 +8,9 @@
     </div>
     <div id="counter" class="flex flex-col mt-12 lg:mt-24">
       <div class="counter-item flex flex-1 flex-row" v-for="counter in counters" :key="counter.name">
-        <div class="counter-chart hidden md:flex md:h-20 md:w-full md:border-r-2 md:border-blue-700 md:items-center md:justify-end md:overflow-hidden">
+        <div class="counter-chart hidden md:flex md:h-12 md:w-full md:border-r-2 md:border-blue-700 md:items-center md:justify-end md:overflow-hidden">
           <div :style="`width: ${800 * counter.widthPercent}px`" class="h-6 flex justify-end">
-            <VueAos animation-class="w-full" :threshold="1">
-              <div class="h-full w-0 bg-blue-700 transition-all duration-3000 ease-in-out"></div>
-            </VueAos>
+              <div class="h-full w-0 bg-blue-700 transition-all duration-1000 ease-in-out" :class="{'w-full':fullWidth}"></div>
           </div>
         </div>
         <div class="counter-detail mb-8 last:mb-0 md:mb-0 md:w-full md:border-blue-700 md:align-middle md:flex md:items-center">
@@ -24,23 +23,26 @@
       </div>
     </div>
   </section>
+  </Intersect>
 </template>
 
 <script>
 import counterItems from '@/data/counter-items'
-import VueAos from 'vue-aos'
 import NumberCount from './NumberCount.vue'
+import Intersect from 'vue-intersect'
+import EventBus from '@/includes/event-bus'
 
 export default {
   data () {
     return {
-      dataCounters: counterItems
+      dataCounters: counterItems,
+      fullWidth: false
     }
   },
 
   components: {
-    VueAos,
-    NumberCount
+    NumberCount,
+    Intersect
   },
 
   computed: {
@@ -61,6 +63,13 @@ export default {
         return counter
       })
     }
+  },
+
+  methods: {
+    startAnimation () {
+      this.fullWidth = true
+      EventBus.$emit('start-counting')
+    }
   }
 }
 </script>
@@ -73,7 +82,7 @@ export default {
     }
   }
 
-  .duration-3000 {
-    transition-duration: 3000ms;
+  .duration-1000 {
+    transition-duration: 1000ms;
   }
 </style>
