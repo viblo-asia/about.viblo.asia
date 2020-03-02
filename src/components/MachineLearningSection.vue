@@ -2,12 +2,11 @@
   <section id="machine-learning" class="lg:h-screen">
     <div id="ml-container"
       class="relative max-w-screen-xl mx-auto h-full flex items-center justify-center md:justify-end">
-      <div class="flex flex-col justify-end p-2 md:p-5 z-10">
-        <div class="flex justify-end">
-          <span class="p-2 md:p-5 bg-blue-600 text-white text-lg md:text-3xl uppercase">
-            <span class="font-thin">Viblo</span> <span class="text-red-600">♥</span> <strong>Machine Learning</strong>
-          </span>
-        </div>
+      <div class="skull-background lg:flex-1"></div>
+      <div class="flex flex-col items-end p-2 md:p-5 z-10 lg:flex-1">
+        <span class="p-2 md:p-5 bg-blue-600 text-white text-lg md:text-3xl uppercase">
+          <span class="font-thin">Viblo</span> <span class="text-red-600">♥</span> <strong>Machine Learning</strong>
+        </span>
         <div id="ml-intro" class="md:mt-12 mt-8 text-blue-100 max-w-lg text-justify">
           <p>Viblo ứng dụng các kỹ thuật trong Machine Learning, Deep Learning và đặc biệt là
             Natural Language Processing để giải quyết các vấn đề nhằm cải thiện trải nghiệm
@@ -31,7 +30,7 @@
     #ml-container {
       padding: 4rem 0;
 
-      &:after {
+      .skull-background {
         content: "";
         background: url(../assets/skull.svg) left bottom no-repeat;
         background-size: contain;
@@ -57,10 +56,15 @@
       #ml-container {
         padding: 0;
 
-        &:after {
-          background: url(../assets/skull.svg) left bottom no-repeat;
-          background-size: 720px;
+        .skull-background {
+          width: 100%;
+          height: 100%;
           opacity: 1;
+          top: auto;
+          left: auto;
+          bottom: auto;
+          right: auto;
+          position: static;
         }
       }
     }

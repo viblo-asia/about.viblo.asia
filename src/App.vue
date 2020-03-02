@@ -5,8 +5,8 @@
       <SectionAbout />
       <SectionMilestone />
       <CounterSection />
-      <SectionService />
       <TopSection />
+      <SectionService />
       <MachineLearningSection />
       <SectionEvent />
     </main>
