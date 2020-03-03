@@ -1,42 +1,42 @@
 export default [
   {
     name: 'Người dùng active',
-    count: 20937
+    count: 41357
+  },
+  {
+    name: 'Người dùng mới hàng tháng',
+    count: 957
   },
   {
     name: 'Bài viết được public',
-    count: 15218
+    count: 24382
   },
   {
-    name: 'Tag',
-    count: 4145
+    name: 'Tổng số tag',
+    count: 8377
   },
   {
     name: 'Lượt tương tác người dùng',
-    count: 87264
+    count: 283015
   },
   {
     name: 'Bài viết được tương tác',
-    count: 11842
+    count: 153940
   },
   {
     name: 'Seminar Videos',
-    count: 58
+    count: 64
   },
   {
-    name: 'Lượt pageview hàng tháng',
-    count: 1100000
+    name: 'Pageview trung bình hàng tháng',
+    count: 1384297
   },
   {
-    name: 'User mới hàng tháng',
-    count: 600
+    name: 'Bài viết mới mỗi tháng',
+    count: 650
   },
   {
-    name: 'Bài viết mới hàng tháng',
-    count: 600
-  },
-  {
-    name: 'Câu hỏi được trả lời',
-    rate: 0.8
+    name: 'Số câu hỏi được trả lời',
+    rate: 0.8783
   }
 ]
