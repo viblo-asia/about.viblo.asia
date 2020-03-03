@@ -42,7 +42,6 @@ export default {
   methods: {
     onLoad () {
       this.heightString = this.$refs.itemBox[0].clientHeight
-      console.log(this.heightString)
     }
   },
   data () {

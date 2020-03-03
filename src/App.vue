@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Menu />
     <FirstSection />
     <main id="content">
       <SectionAbout />
@@ -15,6 +16,7 @@
 </template>
 
 <script>
+import Menu from './components/Menu'
 import Footer from './components/Footer'
 import SectionAbout from './components/SectionAbout'
 import SectionService from './components/SectionService'
@@ -28,6 +30,7 @@ import CounterSection from './components/CounterSection'
 export default {
   name: 'App',
   components: {
+    Menu,
     Footer,
     SectionAbout,
     SectionService,
