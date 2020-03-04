@@ -2,9 +2,7 @@
   <section id="section-service" class="text-center py-16 bg-cover bg-right-top bg-no-repeat">
     <div class="md:max-w-screen-xl m-auto px-4">
       <VueAos animation-class="puffIn magictime" :threshold="1">
-        <div class="section-head text-center">
-          <h3 class="uppercase text-4xl">Our <span class="font-black">services</span></h3>
-        </div>
+        <TitleSection section_title='Our <span class="font-black">services</span>' />
       </VueAos>
       <div class="services-list text-white px-4">
         <div class="service-item py-20 md:py-16 flex flex-row items-center relative" v-for="(service, index) in dataServices" :key="index" :class="service.code">
@@ -38,6 +36,7 @@
 
 <script>
 import VueAos from 'vue-aos'
+import TitleSection from './TitleSection'
 
 export default {
   data () {
@@ -91,7 +90,8 @@ export default {
   },
 
   components: {
-    VueAos
+    VueAos,
+    TitleSection
   }
 }
 </script>

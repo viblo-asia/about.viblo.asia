@@ -63,14 +63,4 @@ body {
   color: $text_primary;
   overflow-x: hidden;
 }
-
-.section-head {
-  h3 {
-    padding: 10px 30px;
-    display: inline-block;
-    margin-bottom: 20px;
-    background: rgba(24,42,192,.4);
-    color: #FFF
-  }
-}
 </style>
