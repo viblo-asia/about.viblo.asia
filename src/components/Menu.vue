@@ -105,9 +105,15 @@ export default {
 </script>
 
 <style lang="scss">
+  @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
   #to-top {
     right: 2rem;
     bottom: 2rem;
+  }
+  #menu-items a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: normal;
   }
 
   .bg-navbar {

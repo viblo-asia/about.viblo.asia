@@ -35,10 +35,10 @@
           <div class="box-title mt-4">Links</div>
           <div class="box-items flex flex-row">
             <div class="box-link mr-2">
-              <a href="https://github.com/viblo.asia/" target="_blank" rel="noopener noreferrer"><LogoGithubIcon w="48px" h="48px" /></a>
+              <a href="https://github.com/viblo.asia/" target="_blank" rel="noopener noreferrer"><LogoGithubIcon w="36px" h="36px" /></a>
             </div>
             <div class="box-link">
-              <a href="https://facebook.com/viblo.asia/" target="_blank" rel="noopener noreferrer"><LogoFacebookIcon w="48px" h="48px" /></a>
+              <a href="https://facebook.com/viblo.asia/" target="_blank" rel="noopener noreferrer"><LogoFacebookIcon w="36px" h="36px" /></a>
             </div>
           </div>
         </div>

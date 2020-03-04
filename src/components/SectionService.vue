@@ -26,7 +26,7 @@
               </div>
               <div class="description text-lg lg:text-2xl mb-4" v-html="service.description"></div>
               <div class="link">
-                <a :href="service.link" class="button rounded-full py-2 px-4 sm:px-16 inline-block">Go to {{ service.title }}</a>
+                <a :href="service.link" class="button rounded-full py-2 px-4 sm:px-16 inline-block" target="_blank">Go to {{ service.title }}</a>
               </div>
             </div>
           </VueAos>
