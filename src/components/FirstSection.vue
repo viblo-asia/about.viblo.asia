@@ -1,14 +1,37 @@
 <template>
-  <section id="first-section"
-    class="relative py-32 md:py-0 min-h-screen flex items-center">
-    <div id="brand" class="flex flex-col items-center p-10 max-w-md mx-auto md:max-w-lg md:absolute z-10">
-      <img src="../assets/logo.svg" alt="Viblo Logo" id="logo" class="mb-3">
-      <div class="text-blue-300 text-center select-auto text-lg md:text-2xl md:whitespace-no-wrap">
-        <h1><strong>Ultimate Platform</strong> for Learning and Sharing <strong>IT Knowledge</strong></h1>
+  <Intersect @change="headerShow" :threshold="[0, 0.7]" rootMargin="0px 0px 1000px 0px">
+    <section id="first-section"
+      class="relative py-32 md:py-0 min-h-screen flex items-center">
+      <div id="brand" class="flex flex-col items-center p-10 max-w-md mx-auto md:max-w-lg md:absolute z-10">
+        <img src="../assets/logo.svg" alt="Viblo Logo" id="logo" class="mb-3 spaceInUp magictime">
+        <div class="text-blue-300 text-center select-auto text-lg md:text-2xl md:whitespace-no-wrap spaceInUp magictime">
+          <h1><strong>Ultimate Platform</strong> for Learning and Sharing <strong>IT Knowledge</strong></h1>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </Intersect>
 </template>
+
+<script>
+import EventBus from '@/includes/event-bus'
+import Intersect from 'vue-intersect'
+
+export default {
+  components: {
+    Intersect
+  },
+
+  methods: {
+    headerShow (status) {
+      if (status[0].intersectionRatio > 0.7) {
+        EventBus.$emit('header-show', true)
+      } else {
+        EventBus.$emit('header-show', false)
+      }
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
   #first-section {
