@@ -47,7 +47,7 @@ export default {
 
       .skull-background {
         content: "";
-        background: url(../assets/skull.svg) left bottom no-repeat;
+        background: url(../assets/skull.png) left bottom no-repeat;
         background-size: contain;
         mix-blend-mode: screen;
         opacity: 0.35;
