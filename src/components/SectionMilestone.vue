@@ -1,9 +1,7 @@
 <template>
   <section id="section-milstone" class="text-center py-16 md:py-32 md:px-16">
     <div class="max-w-full md:max-w-screen-xl m-auto">
-      <div class="section-head text-center">
-        <h3 class="uppercase text-4xl">Viblo <span class="font-black">milestone</span></h3>
-      </div>
+      <TitleSection section_title='Viblo <span class="font-black">milestone</span>' />
       <div class="section-content px-8 md:px-8 flex flex-wrap justify-between">
         <div class="content-item w-full md:w-1/2 inline-block relative" v-for="(data, index) in dataEvents" :key="index">
           <div class="item-title text-white text-4xl inline-block relative mb-6">{{ data.date }}
@@ -26,6 +24,7 @@
 <script>
 import VueAos from 'vue-aos'
 import milestoneItems from '@/data/milestone-items'
+import TitleSection from './TitleSection'
 
 export default {
   data () {
@@ -35,7 +34,8 @@ export default {
   },
 
   components: {
-    VueAos
+    VueAos,
+    TitleSection
   }
 }
 </script>

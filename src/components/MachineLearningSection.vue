@@ -5,9 +5,7 @@
       <div class="skull-background lg:flex-1"></div>
       <div class="flex flex-col items-end p-2 md:p-5 z-10 lg:flex-1">
         <VueAos animation-class="puffIn magictime" :threshold="1">
-          <span class="p-2 md:p-5 bg-blue-600 text-white text-lg md:text-3xl uppercase">
-            <span class="font-thin">Viblo</span> <span class="text-red-600">♥</span> <strong>Machine Learning</strong>
-          </span>
+          <TitleSection section_title='Viblo <span class="text-red-600">♥</span> <span class="font-black">Machine Learning</span>' />
         </VueAos>
 
         <VueAos animation-class="slideRightReturn magictime" :threshold="1">
@@ -29,10 +27,12 @@
 
 <script>
 import VueAos from 'vue-aos'
+import TitleSection from './TitleSection'
 
 export default {
   components: {
-    VueAos
+    VueAos,
+    TitleSection
   }
 }
 </script>

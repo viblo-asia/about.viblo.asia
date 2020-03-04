@@ -1,11 +1,7 @@
 <template>
   <Intersect @enter.once="startAnimation" :threshold="[0.6]">
     <section id="counter-section" class="py-12 lg:py-24">
-      <div class="flex justify-center">
-        <span class="p-2 md:p-5 bg-blue-600 text-white text-lg md:text-3xl uppercase">
-          <span class="font-thin">Những con số</span> <strong>ấn tượng</strong>
-        </span>
-      </div>
+      <TitleSection section_title='Những con số <span class="font-black">ấn tượng</span>' />
       <div id="counter" class="flex flex-col mt-12 lg:mt-24">
         <div class="counter-item flex flex-1 flex-row" v-for="counter in counters" :key="counter.name">
           <div class="counter-chart hidden md:flex md:h-12 md:w-full md:border-r-2 md:border-blue-700 md:items-center md:justify-end md:overflow-hidden">
@@ -31,6 +27,7 @@ import counterItems from '@/data/counter-items'
 import NumberCount from './NumberCount.vue'
 import Intersect from 'vue-intersect'
 import EventBus from '@/includes/event-bus'
+import TitleSection from './TitleSection'
 
 export default {
   data () {
@@ -42,7 +39,8 @@ export default {
 
   components: {
     NumberCount,
-    Intersect
+    Intersect,
+    TitleSection
   },
 
   computed: {
