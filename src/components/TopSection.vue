@@ -126,6 +126,10 @@ export default {
           .belongs-container {
             @apply flex-row-reverse;
 
+            .connector {
+              @apply ml-2 mr-0;
+            }
+
             .belongs {
               @apply text-right;
             }
