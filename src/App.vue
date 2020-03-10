@@ -29,6 +29,7 @@ import CounterSection from './components/CounterSection'
 
 export default {
   name: 'App',
+
   components: {
     Menu,
     Footer,
@@ -45,22 +46,23 @@ export default {
 </script>
 
 <style lang="scss">
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap&subset=vietnamese');
-@import './scss/_variable.scss';
-@import '../node_modules/magic.css/dist/magic.min.css';
+  @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap&subset=vietnamese');
+  @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+  @import './scss/_variable.scss';
+  @import '../node_modules/magic.css/dist/magic.min.css';
 
-body {
-  background: #01001e;
-  font-family: 'Roboto',-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
-}
+  body {
+    background: #01001e;
+    font-family: 'Roboto',-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  }
 
-#app {
-  background: $bg_color;
-  color: $text_primary;
-  overflow-x: hidden;
-}
+  #app {
+    background: $bg_color;
+    color: $text_primary;
+    overflow-x: hidden;
+  }
 </style>

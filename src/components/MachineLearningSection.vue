@@ -2,7 +2,9 @@
   <section id="machine-learning" class="lg:h-screen">
     <div id="ml-container"
       class="relative max-w-screen-xl mx-auto h-full flex items-center justify-center md:justify-end">
-      <div class="skull-background lg:flex-1"></div>
+      <VueAos animation-class="puffIn magictime">
+        <div class="skull-background lg:flex-1"></div>
+      </VueAos>
       <div class="flex flex-col items-end p-2 md:p-5 z-10 lg:flex-1">
         <VueAos animation-class="puffIn magictime" :threshold="1">
           <TitleSection section_title='Viblo <span class="text-red-600">♥</span> <span class="font-black">Machine Learning</span>' />

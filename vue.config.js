@@ -1,6 +1,6 @@
 const path = require('path')
 const PrerenderSPAPlugin = require('prerender-spa-plugin')
-const Renderer = PrerenderSPAPlugin.PuppeteerRenderer
+const JSDomRenderer = require('@prerenderer/renderer-jsdom')
 
 module.exports = {
   pages: {
@@ -18,13 +18,9 @@ module.exports = {
       new PrerenderSPAPlugin({
         staticDir: path.join(__dirname, 'dist'),
         routes: ['/'],
-        minify: {
-          collapseBooleanAttributes: true,
-          collapseWhitespace: true,
-          decodeEntities: true,
-          keepClosingSlash: true,
-          sortAttributes: true
-        }
+        renderer: new JSDomRenderer({
+          renderAfterElementExists: '#first-section, footer'
+        })
       })
     ]
   }

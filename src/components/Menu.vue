@@ -31,13 +31,19 @@
       </div>
       <div id="menu-items" class="w-full xl:block flex-grow xl:flex xl:items-center xl:w-auto xl:text-right" :class="{ hidden: !showMenu }">
         <div class="text-sm xl:flex-grow font-bold text-white">
-          <a v-for="(item, index) in dataMenu" :key="index" href="javascript:void(0)" @click="scrollTo(item.code); showMenu = false" class="block mt-4 xl:inline-block xl:mt-0 text-blue-200 hover:text-white mr-4 uppercase text-md">
+          <a v-for="(item, index) in dataMenu" :key="index" href="javascript:void(0)"
+            @click="scrollTo(item.code); showMenu = false"
+            class="block mt-4 xl:inline-block xl:mt-0 text-blue-200 hover:text-white mr-4 uppercase text-md"
+          >
             {{ item.title }}
           </a>
         </div>
       </div>
     </nav>
-    <a @click="scrollTo()" href="javascript:void(0)" id="to-top" class="fixed rounded-full w-10 h-10 leading-10 text-center font-bold text-black z-50 bg-white">
+    <a @click="scrollTo()" href="javascript:void(0)" id="to-top"
+      class="fixed rounded-full w-10 h-10 leading-10 text-center font-bold text-black z-50 bg-white"
+      :class="{ 'opacity-0': headerShow }"
+    >
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Chevron_up" x="0px" y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
         <path fill="#000" d="M15.484,12.452c-0.436,0.446-1.043,0.481-1.576,0L10,8.705l-3.908,3.747c-0.533,0.481-1.141,0.446-1.574,0  c-0.436-0.445-0.408-1.197,0-1.615c0.406-0.418,4.695-4.502,4.695-4.502C9.43,6.112,9.715,6,10,6s0.57,0.112,0.789,0.335  c0,0,4.287,4.084,4.695,4.502C15.893,11.255,15.92,12.007,15.484,12.452z"/>
       </svg>
@@ -105,14 +111,13 @@ export default {
 </script>
 
 <style lang="scss">
-  @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
   #to-top {
     right: 2rem;
     bottom: 2rem;
   }
+
   #menu-items a {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
+    font-family: 'Montserrat', 'Roboto';
     line-height: normal;
   }
 
