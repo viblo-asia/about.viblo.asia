@@ -21,7 +21,7 @@ export default [
   },
   {
     name: 'Bài viết được tương tác',
-    count: 153940
+    count: 21352
   },
   {
     name: 'Seminar Videos',
@@ -29,7 +29,7 @@ export default [
   },
   {
     name: 'Pageview trung bình hàng tháng',
-    count: 1384297
+    count: 1500000
   },
   {
     name: 'Bài viết mới mỗi tháng',

@@ -19,7 +19,6 @@
           <br/>
           <div class="contact">
             State of Chain 2018 <br>
-            Vietnam Mobile Day 2018 <br>
             Tech Invasion 2018 <br>
             OpenDev: <br/>
             "Inferring the Future of Mobile Application Development with AI/ML" <br/>

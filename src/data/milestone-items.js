@@ -76,10 +76,6 @@ export default [
     mess: 'Viblo chính thức ra mắt dịch vụ mới: Viblo Code!'
   },
   {
-    date: '13.03.2019',
-    mess: 'Mở đăng ký sự kiện Code Challenge - Sân chơi lập trình hấp dẫn dành cho sinh viên IT miền Trung'
-  },
-  {
     date: '20.04.2019',
     mess: 'Tổ chức thành công chung kết cuộc thi Code Challenge 2019, sau vòng loại đã tổ chức ngày 11.04.2019'
   },
