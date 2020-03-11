@@ -51,13 +51,12 @@ export default {
   @tailwind utilities;
 
   @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap&subset=vietnamese');
-  @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
   @import './scss/_variable.scss';
   @import '../node_modules/magic.css/dist/magic.min.css';
 
-  body {
+  html, body, #app {
     background: #01001e;
-    font-family: 'Roboto',-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+    font-family: 'Roboto',-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;
   }
 
   #app {
