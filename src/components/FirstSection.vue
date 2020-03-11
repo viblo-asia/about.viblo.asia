@@ -1,7 +1,9 @@
 <template>
   <Intersect @change="headerShow" :threshold="[0, 0.7]" rootMargin="0px 0px 1000px 0px">
-    <section id="first-section"
-      class="relative py-32 md:py-0 min-h-screen flex items-center">
+    <section
+      id="first-section"
+      class="scrollspy relative py-32 md:py-0 min-h-screen flex items-center"
+    >
       <div id="brand" class="flex flex-col items-center p-10 max-w-md mx-auto md:max-w-lg md:absolute z-10">
         <img src="../assets/logo.svg" alt="Viblo Logo" id="logo" class="mb-3 spaceInUp magictime">
         <div class="text-blue-300 text-center select-auto text-lg md:text-2xl md:whitespace-no-wrap spaceInUp magictime">

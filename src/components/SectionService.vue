@@ -1,5 +1,5 @@
 <template>
-  <section id="section-service" class="text-center py-16 bg-cover bg-right-top bg-no-repeat">
+  <section id="section-service" class="scrollspy text-center py-16 bg-cover bg-right-top bg-no-repeat">
     <div class="md:max-w-screen-xl m-auto px-4">
       <VueAos animation-class="puffIn magictime" :threshold="1">
         <TitleSection section_title='Our <span class="font-black">services</span>' />

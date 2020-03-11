@@ -1,8 +1,8 @@
 <template>
-  <section id="section-milstone" class="text-center py-16 md:pb-32 md:px-16">
+  <section id="section-milstone" class="scrollspy text-center py-16 md:pb-32 md:px-16">
     <div class="max-w-full md:max-w-screen-xl m-auto">
       <TitleSection section_title='Viblo <span class="font-black">milestone</span>' />
-      <div class="section-content px-8 md:px-8 flex flex-wrap justify-between">
+      <div class="section-content pt-24 px-8 md:px-8 flex flex-wrap justify-between">
         <div class="content-item w-full md:w-1/2 inline-block relative" v-for="(data, index) in dataEvents" :key="index">
           <div class="item-title text-white text-4xl inline-block relative mb-6">{{ data.date }}
             <template v-if="index % 2 === 0">

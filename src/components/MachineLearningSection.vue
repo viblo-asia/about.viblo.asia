@@ -1,5 +1,5 @@
 <template>
-  <section id="machine-learning" class="lg:h-screen">
+  <section id="machine-learning" class="scrollspy lg:h-screen">
     <div id="ml-container"
       class="relative max-w-screen-xl mx-auto h-full flex items-center justify-center md:justify-end">
       <VueAos animation-class="puffIn magictime">
@@ -18,7 +18,8 @@
 
             <p>Các ứng dụng sử dụng kỹ thuật Machine Learning của Viblo được publish tại
               <a class="text-blue-400" href="https://machine-learning.viblo.asia">
-                machine-learning.viblo.asia</a>.
+                https://machine-learning.viblo.asia
+              </a>.
             </p>
           </div>
         </VueAos>

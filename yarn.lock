@@ -8400,6 +8400,11 @@ signal-exit@^3.0.0, signal-exit@^3.0.2:
   resolved "https://registry.npm.taobao.org/signal-exit/download/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
   integrity sha1-tf3AjxKH6hF4Yo5BXiUTK3NkbG0=
 
+simple-scrollspy@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/simple-scrollspy/-/simple-scrollspy-2.0.3.tgz#26cb7c8569035c1527aa9cbd40c0b7189298394e"
+  integrity sha512-1qHAOIEh3Sg9i2s6tbcXmOwjThYTgjj+lhy2XGt5IsPRkMdSjn9LBT1ZmB8Z3GuaJbaXcCNh2uX9pt5vjqIgEQ==
+
 simple-swizzle@^0.2.2:
   version "0.2.2"
   resolved "https://registry.npm.taobao.org/simple-swizzle/download/simple-swizzle-0.2.2.tgz#a4da6b635ffcccca33f70d17cb92592de95e557a"

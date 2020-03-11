@@ -1,6 +1,6 @@
 <template>
   <Intersect @enter.once="startAnimation" :threshold="[0.6]">
-    <section id="counter-section" class="py-12 lg:py-24">
+    <section id="counter-section" class="scrollspy py-12 lg:py-24">
       <TitleSection section_title='Những con số <span class="font-black">ấn tượng</span>' />
       <div id="counter" class="flex flex-col mt-12 lg:mt-24">
         <div class="counter-item flex flex-1 flex-row" v-for="counter in counters" :key="counter.name">
@@ -75,9 +75,7 @@ export default {
 <style lang="scss" scoped>
   #counter-section {
     background: radial-gradient(#001748, #010013);
-    .counter-item .counter-chart {
-      // @media (max-width: 767px) {display: none}
-    }
+    min-height: 100vh;
   }
 
   .duration-1000 {

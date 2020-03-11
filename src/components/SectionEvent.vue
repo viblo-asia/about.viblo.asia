@@ -1,5 +1,5 @@
 <template>
-  <section id="section-event" class="text-center py-16 md:py-32">
+  <section id="section-event" class="scrollspy text-center py-16 md:py-32">
     <div class="md:max-w-screen-xl m-auto">
       <div class="about-images">
         <carousel-3d :autoplay="true" :autoplay-timeout="5000" :display="5" :controls-visible="true" :perspective="0" :space="300" :height="heightString">

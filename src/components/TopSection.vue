@@ -1,5 +1,5 @@
 <template>
-  <section id="top-section" class="py-12 lg:py-24">
+  <section id="top-section" class="scrollspy py-12 lg:py-24">
     <div class="max-w-sm lg:max-w-screen-xl mx-auto lg:grid lg:grid-cols-2">
       <div class="top-item" v-for="(item, index) in topItems" :key="index">
         <VueAos animation-class="spaceInDown magictime" :threshold="1">

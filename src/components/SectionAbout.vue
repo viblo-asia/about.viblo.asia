@@ -1,7 +1,7 @@
 <template>
   <section
     id="section-about"
-    class="text-center py-16 md:py-32 flex min-h-screen items-center flex-col md:flex-row relative"
+    class="scrollspy text-center py-16 md:py-32 flex min-h-screen items-center flex-col md:flex-row relative"
   >
     <div class="about-image md:order-last w-full md:w-1/2 md:z-20 relative">
       <VueAos animation-class="spaceInRight magictime" :threshold="0.5">

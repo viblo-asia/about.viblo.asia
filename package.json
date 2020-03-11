@@ -12,6 +12,7 @@
   "dependencies": {
     "core-js": "^3.6.4",
     "magic.css": "^1.4.5",
+    "simple-scrollspy": "^2.0.3",
     "tailwindcss": "^1.2.0",
     "vue": "^2.6.11",
     "vue-aos": "^1.0.1",

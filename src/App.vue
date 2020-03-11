@@ -64,5 +64,9 @@ export default {
     background: $bg_color;
     color: $text_primary;
     overflow-x: hidden;
+
+    a.menu-item.active {
+      color: #ffffff;
+    }
   }
 </style>

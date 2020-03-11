@@ -31,9 +31,11 @@
       </div>
       <div id="menu-items" class="w-full xl:block flex-grow xl:flex xl:items-center xl:w-auto xl:text-right" :class="{ hidden: !showMenu }">
         <div class="text-sm xl:flex-grow font-bold text-white">
-          <a v-for="(item, index) in dataMenu" :key="index" href="javascript:void(0)"
-            @click="scrollTo(item.code); showMenu = false"
-            class="block mt-4 xl:inline-block xl:mt-0 text-blue-200 hover:text-white mr-4 uppercase text-md"
+          <a
+            v-for="(item, index) in dataMenu"
+            :key="index"
+            :href="`#${item.code}`"
+            class="menu-item block mt-4 xl:inline-block xl:mt-0 text-blue-200 hover:text-white mr-4 uppercase text-md"
           >
             {{ item.title }}
           </a>
@@ -53,6 +55,8 @@
 
 <script>
 import EventBus from '@/includes/event-bus'
+import scrollSpy from 'simple-scrollspy'
+import menuItems from '@/data/menu-items'
 
 export default {
   methods: {
@@ -64,40 +68,7 @@ export default {
   data () {
     return {
       showMenu: false,
-      dataMenu: [
-        {
-          title: 'Trang chủ',
-          code: 'app'
-        },
-        {
-          title: 'Giới thiệu',
-          code: 'section-about'
-        },
-        {
-          title: 'Hành trình phát triển',
-          code: 'section-milstone'
-        },
-        {
-          title: 'Con số ấn tượng',
-          code: 'counter-section'
-        },
-        {
-          title: 'Sảnh danh vọng',
-          code: 'top-section'
-        },
-        {
-          title: 'Our services',
-          code: 'section-service'
-        },
-        {
-          title: 'Machine Learning',
-          code: 'machine-learning'
-        },
-        {
-          title: 'Sự kiện',
-          code: 'section-event'
-        }
-      ],
+      dataMenu: menuItems,
       headerShow: true
     }
   },
@@ -105,6 +76,11 @@ export default {
   mounted () {
     EventBus.$on('header-show', status => {
       this.headerShow = status
+    })
+
+    scrollSpy(this.$el, {
+      menuActiveTarget: 'a.menu-item',
+      offset: 100
     })
   }
 }
@@ -117,7 +93,7 @@ export default {
   }
 
   #menu-items a {
-    font-family: 'Montserrat', 'Roboto';
+    color: #71ace3;
     line-height: normal;
   }
 
