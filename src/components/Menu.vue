@@ -1,13 +1,13 @@
 <template>
   <div id="links">
     <nav id="menu"
-      class="flex items-center justify-between flex-wrap p-6 fixed z-50 w-full transition-all duration-500 ease-in-out"
+      class="flex items-center justify-between flex-wrap p-4 fixed z-50 w-full transition-all duration-500 ease-in-out"
       :class="{ 'bg-transparent': (headerShow && !showMenu), 'bg-navbar shadow-xl': (!headerShow || showMenu) }"
     >
       <div class="flex items-center flex-shrink-0 text-white mr-6">
         <!-- logo -->
         <svg viewBox="0 0 321.74 107.65" xmlns="http://www.w3.org/2000/svg"
-          class="fill-current h-8 w-24 mr-2 transition-opacity duration-500 ease-in-out"
+          class="fill-current h-7 w-24 mr-2 transition-opacity duration-500 ease-in-out"
           :class="{ 'opacity-0': headerShow }"
         >
           <!-- letter V -->
