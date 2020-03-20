@@ -4,7 +4,7 @@
 
     <div class="max-w-sm lg:max-w-screen-xl mx-auto lg:grid lg:grid-cols-2">
       <div class="top-item" v-for="(item, index) in topItems" :key="index">
-        <VueAos animation-class="spaceInDown magictime" :threshold="1">
+        <VueAos animation-class="zoomInUp animated">
           <div class="item-container">
             <a :href="item.url" target="_blank" rel="noopener">
               <div class="hexagon">
@@ -47,6 +47,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @import '~animate.css/source/zooming_entrances/zoomInUp.css';
+
   .top-item {
     @apply flex flex-1 w-full my-0 px-2;
 

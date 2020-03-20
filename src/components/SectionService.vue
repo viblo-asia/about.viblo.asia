@@ -4,7 +4,7 @@
     class="scrollspy text-center py-16 bg-cover bg-right-top bg-no-repeat"
   >
     <div class="md:max-w-screen-xl m-auto px-4">
-      <VueAos animation-class="puffIn magictime" :threshold="1">
+      <VueAos animation-class="zoomIn animated" :threshold="1">
         <TitleSection section_title="Our <span class='font-black'>services</span>" />
       </VueAos>
       <div class="services-list text-white px-4">
@@ -16,7 +16,7 @@
           style="min-height: 70vh"
         >
           <VueAos
-            :animation-class="index % 2 === 0 ? 'slideLeftReturn magictime' : 'slideRightReturn magictime'"
+            :animation-class="index % 2 === 0 ? 'slideInLeft animated' : 'slideInRight animated'"
           >
             <div
               class="item-images absolute sm:relative overflow-hidden sm:block sm:w-1/3 md:w-1/2 inset-0 flex items-center justify-center"
@@ -31,7 +31,7 @@
             </div>
           </VueAos>
           <VueAos
-            :animation-class="index % 2 !== 0 ? 'slideLeftReturn magictime' : 'slideRightReturn magictime'"
+            :animation-class="index % 2 !== 0 ? 'slideInLeft animated' : 'slideInRight animated'"
           >
             <div
               class="item-content w-full sm:w-2/3 md:w-1/2 text-center sm:text-left sm:pl-4 md:pl-0 z-10"
@@ -131,6 +131,9 @@ export default {
 </script>
 
 <style lang="scss">
+@import '~animate.css/source/sliding_entrances/slideInLeft.css';
+@import '~animate.css/source/sliding_entrances/slideInRight.css';
+
 #section-service {
   background: -moz-linear-gradient(
     top,
@@ -192,8 +195,7 @@ export default {
     background-color: #3e6f8d;
   }
   .service-item.v-ctf .link .button {
-    background-color: #97f739;
-    color: #f05d32;
+    background-color: #66a825;
   }
   .service-item.v-cv .link .button {
     background-color: #f5861e;

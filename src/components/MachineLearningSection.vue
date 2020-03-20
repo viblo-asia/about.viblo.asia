@@ -2,15 +2,15 @@
   <section id="machine-learning" class="scrollspy lg:h-screen">
     <div id="ml-container"
       class="relative max-w-screen-xl mx-auto h-full flex items-center justify-center md:justify-end">
-      <VueAos animation-class="puffIn magictime">
+      <VueAos animation-class="zoomInLeft animated">
         <div class="skull-background lg:flex-1"></div>
       </VueAos>
       <div class="flex flex-col items-end p-2 md:p-5 z-10 lg:flex-1">
-        <VueAos animation-class="puffIn magictime" :threshold="1">
+        <VueAos animation-class="zoomInRight animated">
           <TitleSection section_title='Viblo <span class="text-red-600">♥</span> <span class="font-black">Machine Learning</span>' />
         </VueAos>
 
-        <VueAos animation-class="slideRightReturn magictime" :threshold="1">
+        <VueAos animation-class="zoomInRight animated">
           <div id="ml-intro" class="md:mt-12 mt-8 text-blue-100 max-w-lg text-justify">
             <p>Viblo ứng dụng các kỹ thuật trong Machine Learning, Deep Learning và đặc biệt là
               Natural Language Processing để giải quyết các vấn đề nhằm cải thiện trải nghiệm
@@ -41,6 +41,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @import '~animate.css/source/zooming_entrances/zoomInLeft.css';
+  @import '~animate.css/source/zooming_entrances/zoomInRight.css';
+
   #machine-learning {
     background: linear-gradient(90deg, rgba(1,0,30,1) 0%, rgba(0,61,189,1) 100%);
     background-size: contain;

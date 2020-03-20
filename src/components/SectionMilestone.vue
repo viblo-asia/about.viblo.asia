@@ -6,13 +6,13 @@
         <div class="content-item w-full md:w-1/2 inline-block relative" v-for="(data, index) in dataEvents" :key="index">
           <div class="item-title text-white text-4xl inline-block relative mb-6">{{ data.date }}
             <template v-if="index % 2 === 0">
-              <VueAos animation-class="tinLeftIn magictime" :threshold="1"><span class="under-ruler"></span></VueAos>
+              <VueAos animation-class="bounceInLeft animated" :threshold="1"><span class="under-ruler"></span></VueAos>
             </template>
             <template v-else>
-              <VueAos animation-class="tinRightIn magictime" :threshold="1"><span class="under-ruler"></span></VueAos>
+              <VueAos animation-class="bounceInRight animated" :threshold="1"><span class="under-ruler"></span></VueAos>
             </template>
           </div>
-          <VueAos animation-class="spaceInDown magictime" :threshold="1">
+          <VueAos animation-class="zoomInUp animated" :threshold="1">
             <div class="item-description" v-html="data.mess" />
           </VueAos>
         </div>
@@ -41,7 +41,11 @@ export default {
 </script>
 
 <style lang="scss">
+@import '~animate.css/source/bouncing_entrances/bounceInRight.css';
+@import '~animate.css/source/bouncing_entrances/bounceInLeft.css';
+@import '~animate.css/source/zooming_entrances/zoomInUp.css';
 @import '../scss/_variable.scss';
+
 $border_color: rgba(36, 61, 255, 1);
 $border_width: 3px;
 
