@@ -6,8 +6,8 @@
     >
       <div id="brand" class="flex flex-col items-center p-10 max-w-md mx-auto md:max-w-lg md:absolute z-10">
         <img src="../assets/logo.svg" alt="Viblo Logo" id="logo" class="mb-3 spaceInUp magictime">
-        <div class="text-blue-300 text-center select-auto text-lg md:text-2xl md:whitespace-no-wrap spaceInUp magictime">
-          <h1><strong>Ultimate Platform</strong> for Learning and Sharing <strong>IT Knowledge</strong></h1>
+        <div class="my-4 text-blue-300 text-center select-auto text-lg md:text-2xl md:whitespace-no-wrap spaceInUp magictime">
+          <h1>Ultimate platform for learning and sharing IT Knowledge</h1>
         </div>
       </div>
     </section>

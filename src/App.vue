@@ -9,7 +9,6 @@
       <TopSection />
       <SectionService />
       <MachineLearningSection />
-      <SectionEvent />
     </main>
     <Footer />
   </div>
@@ -24,7 +23,6 @@ import SectionMilestone from './components/SectionMilestone'
 import FirstSection from './components/FirstSection'
 import TopSection from './components/TopSection'
 import MachineLearningSection from './components/MachineLearningSection'
-import SectionEvent from './components/SectionEvent'
 import CounterSection from './components/CounterSection'
 
 export default {
@@ -39,7 +37,6 @@ export default {
     FirstSection,
     TopSection,
     MachineLearningSection,
-    SectionEvent,
     CounterSection
   }
 }
