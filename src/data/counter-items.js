@@ -13,7 +13,7 @@ export default [
   { name: 'Tổng số  series được public', count: 533 },
   { name: 'Tổng số  organization', count: 29 },
   // { name: 'Tổng số  Challenge đã public trên Viblo Code', count: 67 },
-  { name: 'Số lượng người dùng vượt qua được Challenge trên Viblo Code', rate: 7.09 },
+  { name: 'Người dùng vượt qua được Challenge trên Viblo Code', rate: 7.09 },
   // { name: 'Tổng số  Puzzle đã public trên Viblo CTF', count: 75 },
-  { name: 'Số lượng người dùng tìm được Flag trên Viblo CTF', rate: 20.93 }
+  { name: 'Người dùng tìm được Flag trên Viblo CTF', rate: 20.93 }
 ]

@@ -1,5 +1,5 @@
 <template>
-  <section id="section-milstone" class="scrollspy text-center py-16 md:pb-32 md:px-16">
+  <section id="section-milestone" class="scrollspy text-center py-16 md:pb-32 md:px-16">
     <div class="max-w-full md:max-w-screen-xl m-auto">
       <TitleSection section_title='Viblo <span class="font-black">milestone</span>' />
       <div class="section-content pt-24 px-8 md:px-8 flex flex-wrap justify-between">
@@ -45,7 +45,7 @@ export default {
 $border_color: rgba(36, 61, 255, 1);
 $border_width: 3px;
 
-  #section-milstone {
+  #section-milestone {
     .section-content {
       .content-item {
         .item-title:before {

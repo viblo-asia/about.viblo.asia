@@ -9,7 +9,7 @@ export default [
   },
   {
     title: 'Hành trình phát triển',
-    code: 'section-milstone'
+    code: 'section-milestone'
   },
   {
     title: 'Con số ấn tượng',
@@ -26,9 +26,5 @@ export default [
   {
     title: 'Machine Learning',
     code: 'machine-learning'
-  },
-  {
-    title: 'Sự kiện',
-    code: 'section-event'
   }
 ]

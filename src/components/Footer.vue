@@ -5,9 +5,9 @@
         <div class="link-box">
           <div class="box-title">Resources</div>
           <div class="box-items">
-            <div class="box-link"><a href="https://viblo.asia/organization-feature" target="_blank" rel="noopener noreferrer">Organization feature</a></div>
-            <div class="box-link"><a href="https://viblo.asia/questions" target="_blank" rel="noopener noreferrer">Questions & answers</a></div>
-            <div class="box-link"><a href="https://machine-learning.viblo.asia/" target="_blank" rel="noopener noreferrer">Machine Learning system</a></div>
+            <div class="box-link"><a href="https://viblo.asia/organization-feature" target="_blank" rel="noopener noreferrer">Organization Feature</a></div>
+            <div class="box-link"><a href="https://viblo.asia/questions" target="_blank" rel="noopener noreferrer">Questions & Answers</a></div>
+            <div class="box-link"><a href="https://machine-learning.viblo.asia/" target="_blank" rel="noopener noreferrer">Machine Learning System</a></div>
           </div>
         </div>
 
@@ -34,12 +34,12 @@
 
           <div class="box-title mt-4">Links</div>
           <div class="box-items flex flex-row">
-            <div class="box-link mr-2">
-              <a href="https://github.com/viblo.asia/" target="_blank" rel="noopener noreferrer"><LogoGithubIcon w="36px" h="36px" /></a>
-            </div>
-            <div class="box-link">
-              <a href="https://facebook.com/viblo.asia/" target="_blank" rel="noopener noreferrer"><LogoFacebookIcon w="36px" h="36px" /></a>
-            </div>
+            <a class="box-link block mr-2" href="https://github.com/viblo-asia" target="_blank" rel="noopener noreferrer">
+              <LogoGithubIcon w="36px" h="36px" />
+            </a>
+            <a class="box-link block" href="https://facebook.com/viblo.asia" target="_blank" rel="noopener noreferrer">
+              <LogoFacebookIcon w="36px" h="36px" />
+            </a>
           </div>
         </div>
       </div>
@@ -92,7 +92,6 @@ export default {
       }
 
       .box-items {
-
         .box-link {
           @apply mb-2 fill-current;
         }

@@ -50,7 +50,7 @@
               </div>
 
               <div
-                class="description text-lg lg:text-2xl my-8 lg:my-16"
+                class="description text-lg my-8 lg:my-16"
                 v-html="service.description"
               ></div>
               <div class="link">
