@@ -90,9 +90,5 @@ export default [
   {
     date: '03.10.2019',
     mess: 'Viblo Platform: chính thức ra mắt Viblo CTF!'
-  },
-  {
-    date: '03.04.2020',
-    mess: 'Khởi động chuỗi sự kiện kỷ niệm 5 năm ngày ra mắt chính thức của Viblo. Mở hệ thống đăng ký các cuộc thi Viblo Mayfest, Code Contest và CTF Contest.'
   }
 ]
