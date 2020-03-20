@@ -1,15 +1,24 @@
 <template>
   <section id="top-section" class="scrollspy py-12 lg:py-24">
+    <TitleSection section_title="Sảnh danh vọng" class="my-16" />
+
     <div class="max-w-sm lg:max-w-screen-xl mx-auto lg:grid lg:grid-cols-2">
       <div class="top-item" v-for="(item, index) in topItems" :key="index">
         <VueAos animation-class="spaceInDown magictime" :threshold="1">
           <div class="item-container">
-            <div class="hexagon">
-              <div class="hexagon-content" v-html="item.title"></div>
-            </div>
+            <a :href="item.url" target="_blank" rel="noopener">
+              <div class="hexagon">
+                <div class="hexagon-content" v-html="item.title" />
+              </div>
+            </a>
             <div class="belongs-container">
-              <div class="connector"></div>
-              <div class="belongs" v-html="item.belongs"></div>
+              <div class="connector" />
+              <a
+                :href="item.url"
+                rel="noopener"
+                class="belongs transition duration-150 ease-in-out hover:text-white"
+                v-html="item.belongs"
+              />
             </div>
           </div>
         </VueAos>
@@ -21,6 +30,7 @@
 <script>
 import VueAos from 'vue-aos'
 import topItems from '@/data/top-items'
+import TitleSection from './TitleSection'
 
 export default {
   data () {
@@ -30,7 +40,8 @@ export default {
   },
 
   components: {
-    VueAos
+    VueAos,
+    TitleSection
   }
 }
 </script>
@@ -64,7 +75,7 @@ export default {
       }
 
       .belongs {
-        @apply uppercase text-xs text-blue-600 flex-shrink;
+        @apply uppercase text-xs flex-shrink;
       }
     }
   }

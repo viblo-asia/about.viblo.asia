@@ -1,12 +1,27 @@
 export default [
   {
     title: 'Người dùng có <span class="font-bold">reputation</span> cao nhất',
-    belongs: 'Tran Duc Thang',
+    belongs: 'Tran Duc Thang <small>@thangtd90<small/>',
     url: 'https://viblo.asia/u/thangtd90'
   },
   {
+    title: 'Người dùng cao điểm nhất Viblo Code',
+    belongs: 'king <small>@knight<small/>',
+    url: 'https://code.viblo.asia/users/knight'
+  },
+  {
+    title: 'Hacker <strong>"bá đạo"</strong> nhất Viblo CTF',
+    belongs: '生きたい <small>@ngoctnq<small/>',
+    url: 'https://ctf.viblo.asia/users/ngoctnq'
+  },
+  {
+    title: 'Organization có nhiều <strong>bài viết</strong> nhất',
+    belongs: 'Sun* Blockchain Team',
+    url: 'https://viblo.asia/o/sun-blockchain-team'
+  },
+  {
     title: 'Người dùng có nhiều <span class="font-bold">bài viết</span> nhất',
-    belongs: 'Cuong Le Ngoc @lncnb',
+    belongs: 'Cuong Le Ngoc <small>@lncnb</small>',
     url: 'https://viblo.asia/u/lncnb'
   },
   {
