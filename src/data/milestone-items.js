@@ -1,7 +1,21 @@
+const renderLink = (label, href) => `<a href="${href}" target="_blank" class="underline">${label}</a>`
+
+const links = {
+  viblo: renderLink('Viblo', 'https://viblo.asia'),
+  browserExtension: renderLink('Browser Extension', 'https://chrome.google.com/webstore/detail/viblos-news-feed/mliahmjgdpkkicelofhbhgiidgljijmj'),
+  github: renderLink('https://github.com/viblo-asia', 'https://github.com/viblo-asia'),
+  machineLearning: renderLink('https://machine-learning.viblo.asia', 'https://machine-learning.viblo.asia'),
+  qa: renderLink('Question & Answer', 'https://viblo.asia/questions'),
+  app: renderLink('Smartphone', 'https://viblo.asia/app'),
+  code: renderLink('Viblo Code', 'https://code.viblo.asia'),
+  ctf: renderLink('Viblo CTF', 'https://ctf.viblo.asia'),
+  cv: renderLink('Viblo CV', 'https://cv.viblo.asia')
+}
+
 export default [
   {
     date: '10.2014',
-    mess: 'Dự án Viblo (Vietnam IT Blog) được khởi động với mục đích tạo ra một cộng đồng nơi thành viên có thể chia sẻ, học hỏi kiến thức Công nghệ thông tin bằng tiếng mẹ đẻ.'
+    mess: `Dự án ${links.viblo} (Vietnam IT Blog) được khởi động với mục đích tạo ra một cộng đồng nơi thành viên có thể chia sẻ, học hỏi kiến thức Công nghệ thông tin bằng tiếng mẹ đẻ.`
   },
   {
     date: '03.11.2014',
@@ -21,7 +35,7 @@ export default [
   },
   {
     date: '24.03.2017',
-    mess: 'Ra mắt Chrome Extension, giúp người dùng dễ dàng tiếp cận nội dung, thông báo mới từ phía Viblo.'
+    mess: `Ra mắt ${links.browserExtension}, giúp người dùng dễ dàng tiếp cận nội dung, thông báo mới từ phía Viblo.`
   },
   {
     date: '15.05.2017',
@@ -33,7 +47,7 @@ export default [
   },
   {
     date: '08.08.2017',
-    mess: 'Ra mắt tính năng Question & Answer, giúp người dùng đặt câu hỏi để nhận được trợ giúp từ thành viên khác.'
+    mess: `Ra mắt tính năng ${links.qa}, giúp người dùng đặt câu hỏi để nhận được trợ giúp từ thành viên khác.`
   },
   {
     date: '26.11.2017',
@@ -41,11 +55,11 @@ export default [
   },
   {
     date: '23.04.2018',
-    mess: 'Ra mắt ứng dụng Smartphone trên 2 nền tảng Android & iOS, giúp người dùng có thể dễ dàng tiếp cận với nguồn kiến thức phong phú được chia sẻ trên Viblo hàng ngày.'
+    mess: `Ra mắt ứng dụng ${links.app} trên 2 nền tảng Android & iOS, giúp người dùng có thể dễ dàng tiếp cận với nguồn kiến thức phong phú được chia sẻ trên Viblo hàng ngày.`
   },
   {
     date: '28.05.2018',
-    mess: 'Open source nhiều services được sử dụng bởi Viblo tại địa chỉ https://github.com/viblo-asia'
+    mess: `Open source nhiều services được sử dụng bởi Viblo tại địa chỉ ${links.github}`
   },
   {
     date: '31.05.2018',
@@ -57,11 +71,11 @@ export default [
   },
   {
     date: '24.09.2018',
-    mess: 'Ra mắt chuyên trang giới thiệu về các dịch vụ sử dụng Machine Learning của Viblo, tại địa chỉ https://machine-learning.viblo.asia, đồng thời thông báo về định hướng ứng dụng Machine Learning trong việc cải thiện trải nghiệm người dùng tại Viblo trong thời gian tới.'
+    mess: `Ra mắt chuyên trang giới thiệu về các dịch vụ sử dụng Machine Learning của Viblo, tại địa chỉ ${links.machineLearning}, đồng thời thông báo về định hướng ứng dụng Machine Learning trong việc cải thiện trải nghiệm người dùng tại Viblo trong thời gian tới.`
   },
   {
     date: '25.09.2018',
-    mess: 'Thông báo về việc trở thành đơn vị bảo trợ truyền thông của sự kiện Blockchain lớn bậc nhất tại Vietnam, tiêu điểm Hackathon & Meetup "State of Chain 2018"...'
+    mess: 'Thông báo về việc trở thành đơn vị bảo trợ truyền thông của sự kiện Blockchain lớn bậc nhất tại Việt Nam, tiêu điểm Hackathon & Meetup "State of Chain 2018"...'
   },
   {
     date: '10.2018',
@@ -73,7 +87,7 @@ export default [
   },
   {
     date: '11.03.2019',
-    mess: 'Viblo chính thức ra mắt dịch vụ mới: Viblo Code!'
+    mess: `Viblo chính thức ra mắt dịch vụ mới: ${links.code}!`
   },
   {
     date: '20.04.2019',
@@ -85,10 +99,10 @@ export default [
   },
   {
     date: '23.05.2019',
-    mess: 'Viblo chính thức ra mắt dịch vụ mới: Viblo CV!'
+    mess: `Viblo chính thức ra mắt dịch vụ mới: ${links.cv}!`
   },
   {
     date: '03.10.2019',
-    mess: 'Viblo Platform: chính thức ra mắt Viblo CTF!'
+    mess: `Viblo Platform: chính thức ra mắt ${links.ctf}!`
   }
 ]

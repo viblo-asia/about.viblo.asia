@@ -28,7 +28,7 @@
 
             <p class="my-3">
               Với nền móng là dịch vụ
-              <a class="text-decoration" href="https://viblo.asia" target="_blank" rel="noopener"><strong>Viblo</strong></a>
+              <a href="https://viblo.asia" class="underline" target="_blank" rel="noopener"><strong>Viblo</strong></a>
               được ra mắt ngày 03.04.2015, bạn có thể viết và chia sẻ nội dung liên quan đến các vấn đề kỹ thuật như:
               <strong>Development</strong> (chủ đề lập trình, infrastructure...),
               <strong>Design</strong> (thiết kế trong quá trình sản xuất phần mềm),
@@ -39,11 +39,11 @@
             <p class="my-3">
               Từ năm 2019, Viblo mở rộng thêm những dịch vụ mới để trở thành
               Viblo Platform bao gồm:
-              <a href="https://code.viblo.asia" target="_blank" rel="noopener"><strong>Viblo Code</strong></a>
+              <a href="https://code.viblo.asia" class="underline" target="_blank" rel="noopener"><strong>Viblo Code</strong></a>
               (dịch vụ về luyện tập kỹ năng coding, giải thuật),
-              <a href="https://ctf.viblo.asia" target="_blank" rel="noopener"><strong>Viblo CTF</strong></a>
+              <a href="https://ctf.viblo.asia" class="underline" target="_blank" rel="noopener"><strong>Viblo CTF</strong></a>
               (dịch vụ về luyện tập kỹ năng coding, an toàn thông tin) và
-              <a href="https://cv.viblo.asia" target="_blank" rel="noopener"><strong>Viblo CV</strong></a>
+              <a href="https://cv.viblo.asia" class="underline" target="_blank" rel="noopener"><strong>Viblo CV</strong></a>
               (dịch vụ tạo các mẫu CV chuyên nghiệp dành cho lập trình viên)
               với mong muốn vươn mình trở thành một nền tảng mở, đóng góp cho sự phát triển
               của cộng đồng IT Việt Nam.

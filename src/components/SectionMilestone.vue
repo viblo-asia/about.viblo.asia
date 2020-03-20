@@ -13,7 +13,7 @@
             </template>
           </div>
           <VueAos animation-class="spaceInDown magictime" :threshold="1">
-            <div class="item-description">{{ data.mess }}</div>
+            <div class="item-description" v-html="data.mess" />
           </VueAos>
         </div>
       </div>
