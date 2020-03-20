@@ -38,5 +38,17 @@ export default [
   {
     name: 'Số câu hỏi được trả lời',
     rate: 0.8783
+  },
+  {
+    name: 'Tổng số câu hỏi',
+    count: 1063
+  },
+  {
+    name: 'Tổng số  series được public',
+    count: 533
+  },
+  {
+    name: 'Tổng số  organization',
+    count: 29
   }
 ]

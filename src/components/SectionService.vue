@@ -18,11 +18,15 @@
           </VueAos>
           <VueAos :animation-class="index % 2 !== 0 ? 'slideLeftReturn magictime' : 'slideRightReturn magictime'">
             <div class="item-content w-full sm:w-2/3 md:w-1/2 text-center sm:text-left sm:pl-4 md:pl-0 z-10" :class="index % 2 !== 0 ? 'md:order-first' : 'md:text-right'">
-              <div class="logo mb-4"><img class="inline-block max-w-full md:max-w-lg md:h-20" :src="service.logo" :alt="service.title" /></div>
-              <div class="title mb-4 text-2xl lg:text-4xl font-bold hidden">
+              <div class="logo">
+                <img class="inline-block max-w-full md:max-w-lg md:h-20" :src="service.logo" :alt="service.title" />
+              </div>
+
+              <div class="title text-2xl lg:text-4xl font-bold hidden">
                 <h3 class="uppercase">{{ service.title }}</h3>
               </div>
-              <div class="description text-lg lg:text-2xl mb-4" v-html="service.description"></div>
+
+              <div class="description text-lg lg:text-2xl my-8 lg:my-16" v-html="service.description"></div>
               <div class="link">
                 <a :href="service.link" class="button rounded-full py-2 px-4 sm:px-16 inline-block" target="_blank">Go to {{ service.title }}</a>
               </div>
