@@ -10,8 +10,8 @@
     "release": "yarn build && yarn zip"
   },
   "dependencies": {
+    "animate.css": "^3.7.2",
     "core-js": "^3.6.4",
-    "magic.css": "^1.4.5",
     "simple-scrollspy": "^2.0.3",
     "tailwindcss": "^1.2.0",
     "vue": "^2.6.11",

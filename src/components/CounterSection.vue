@@ -1,13 +1,16 @@
 <template>
-  <Intersect @enter.once="startAnimation" :threshold="[0.6]">
     <section id="counter-section" class="scrollspy py-12 lg:py-24">
       <TitleSection section_title="Những con số <span class='font-black'>ấn tượng</span>" />
       <div id="counter" class="flex flex-col mt-12 lg:mt-24">
         <div
           class="counter-item flex flex-1 flex-row"
-          v-for="counter in counters"
+          v-for="(counter, index) in counters"
           :key="counter.name"
         >
+          <Intersect v-if="index > 4" @enter.once="startAnimation" :threshold="[0, 1]">
+            <div></div>
+          </Intersect>
+
           <div
             class="counter-chart hidden md:flex md:h-12 md:w-full md:border-r-2 md:border-blue-700 md:items-center md:justify-end md:overflow-hidden"
           >
@@ -18,27 +21,29 @@
               ></div>
             </div>
           </div>
+
           <div
             class="counter-detail mb-8 last:mb-0 md:mb-0 md:w-full md:border-blue-700 md:align-middle md:flex md:items-center"
           >
-            <div class="text-white ml-4">
-              <span
-                class="font-bold text-white mr-2 inline-block w-20 text-center"
+            <div class="text-white ml-4 flex items-center">
+              <div
+                class="font-bold text-white mr-2 inline-block w-20 text-center flex-shrink-0"
                 v-if="counter.count"
               >
                 <NumberCount :numberCount="counter.count" />
-              </span>
-              <span
-                class="font-bold text-white mr-2 inline-block w-20 text-center"
+              </div>
+              <div
+                class="font-bold text-white mr-2 inline-block w-20 text-center flex-shrink-0"
                 v-else
-              >{{ counter.rate }}%</span>
-              <span class="font-light text-blue-300 uppercase">{{ counter.name }}</span>
+              >
+                <NumberCount :numberCount="counter.rate" />%
+              </div>
+              <div class="font-light text-blue-300 uppercase">{{ counter.name }}</div>
             </div>
           </div>
         </div>
       </div>
     </section>
-  </Intersect>
 </template>
 
 <script>

@@ -4,7 +4,7 @@
     class="scrollspy text-center py-16 md:py-32 flex min-h-screen items-center flex-col md:flex-row relative"
   >
     <div class="about-image md:order-last w-full md:w-1/2 md:z-20 relative">
-      <VueAos animation-class="spaceInRight magictime" :threshold="0.5">
+      <VueAos animation-class="zoomInRight animated" :threshold="0.5">
         <div class="max-w-3xl">
           <img src="../assets/viblo app.png" alt="section about" class="m-auto max-w-full" />
         </div>
@@ -14,10 +14,10 @@
       class="about-content pt-16 md:order-first w-full md:w-1/2 text-center absolute md:relative z-10"
     >
       <div class="px-8 md:py-8 md:transform max-w-xl m-auto">
-        <VueAos animation-class="tinLeftIn magictime" :threshold="1">
+        <VueAos animation-class="fadeInLeft animated" :threshold="1">
           <h1 class="uppercase text-white text-5xl font-black">Viblo Platform</h1>
         </VueAos>
-        <VueAos animation-class="tinLeftIn magictime" :threshold="1">
+        <VueAos animation-class="fadeInLeft animated" :threshold="1">
           <div class="about-text text-justify">
             <p class="my-3">
               <strong>Viblo Platform</strong> là cộng đồng chia sẻ kiến thức
@@ -65,6 +65,8 @@ export default {
 }
 </script>
 <style lang="scss">
+@import '~animate.css/source/zooming_entrances/zoomInRight.css';
+@import '~animate.css/source/fading_entrances/fadeInLeft.css';
 @import "../scss/_variable.scss";
 
 #section-about {
