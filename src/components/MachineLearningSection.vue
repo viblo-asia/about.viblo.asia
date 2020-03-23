@@ -1,5 +1,5 @@
 <template>
-  <section id="machine-learning" class="scrollspy lg:h-screen">
+  <section id="machine-learning" class="scrollspy py-16 md:py-32 lg:h-screen">
     <div id="ml-container"
       class="relative max-w-screen-xl mx-auto h-full flex items-center justify-center md:justify-end">
       <VueAos animation-class="zoomInLeft animated">

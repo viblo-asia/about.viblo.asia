@@ -1,7 +1,7 @@
 <template>
-    <section id="counter-section" class="scrollspy py-12 lg:py-24">
+    <section id="counter-section" class="scrollspy py-16 md:py-32">
       <TitleSection section_title="Những con số <span class='font-black'>ấn tượng</span>" />
-      <div id="counter" class="flex flex-col mt-12 lg:mt-24">
+      <div id="counter" class="flex flex-col pt-24">
         <div
           class="counter-item flex flex-1 flex-row"
           v-for="(counter, index) in counters"

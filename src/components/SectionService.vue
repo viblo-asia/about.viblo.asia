@@ -1,7 +1,7 @@
 <template>
   <section
     id="section-service"
-    class="scrollspy text-center py-16 bg-cover bg-right-top bg-no-repeat"
+    class="scrollspy text-center py-16 md:py-32 bg-cover bg-right-top bg-no-repeat"
   >
     <div class="md:max-w-screen-xl m-auto px-4">
       <VueAos animation-class="zoomIn animated" :threshold="1">
