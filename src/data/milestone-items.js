@@ -9,7 +9,9 @@ const links = {
   app: renderLink('Smartphone', 'https://viblo.asia/app'),
   code: renderLink('Viblo Code', 'https://code.viblo.asia'),
   ctf: renderLink('Viblo CTF', 'https://ctf.viblo.asia'),
-  cv: renderLink('Viblo CV', 'https://cv.viblo.asia')
+  cv: renderLink('Viblo CV', 'https://cv.viblo.asia'),
+  mayfest: renderLink('Viblo May Fest', 'https://mayfest.viblo.asia'),
+  birthday: renderLink('5 năm thành lập Viblo', 'https://5years.viblo.asia')
 }
 
 export default [
@@ -104,5 +106,13 @@ export default [
   {
     date: '03.10.2019',
     mess: `Viblo Platform: chính thức ra mắt ${links.ctf}!`
+  },
+  {
+    date: '04.2020',
+    mess: `Diễn ra Viblo Code Contest và Viblo CTF Contest mừng kỷ niệm ${links.birthday}`
+  },
+  {
+    date: '01-31.05.2020',
+    mess: `Diễn ra sự kiện ${links.mayfest} - Lễ hội chia sẻ kiến thức về công nghệ thông tin`
   }
 ]

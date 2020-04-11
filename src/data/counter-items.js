@@ -6,7 +6,7 @@ export default [
   { name: 'Lượt tương tác người dùng', count: 297468 },
   { name: 'Bài viết được tương tác', count: 21742 },
   { name: 'Seminar Videos', count: 64 },
-  { name: 'Pageview trung bình hàng tháng', count: 1600000 },
+  { name: 'Pageview trung bình hàng tháng', count: 1700000 },
   { name: 'Bài viết mới mỗi tháng', count: 834 },
   { name: 'Số câu hỏi được trả lời', rate: 87.11 },
   { name: 'Tổng số câu hỏi', count: 1102 },
