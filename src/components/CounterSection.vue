@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import counterItems from '@/data/counter-items'
+import axios from 'axios'
 import NumberCount from './NumberCount.vue'
 import Intersect from 'vue-intersect'
 import EventBus from '@/includes/event-bus'
@@ -56,8 +56,10 @@ import TitleSection from './TitleSection'
 export default {
   data () {
     return {
-      dataCounters: counterItems,
-      fullWidth: false
+      fullWidth: false,
+      viblo: [],
+      ctf: [],
+      code: []
     }
   },
 
@@ -67,15 +69,48 @@ export default {
     TitleSection
   },
 
+  mounted () {
+    axios
+      .get(`${process.env.VUE_APP_VIBLO_API_URL}/api/about`)
+      .then(res => {
+        this.viblo = res.data.data
+      })
+      .catch(error => {
+        console.log(error)
+      })
+
+    axios
+      .get(`${process.env.VUE_APP_CODE_API_URL}/api/about`)
+      .then(res => {
+        this.code = res.data
+      })
+      .catch(error => {
+        console.log(error)
+      })
+
+    axios
+      .get(`${process.env.VUE_APP_CTF_API_URL}/api/about`)
+      .then(res => {
+        this.ctf = res.data
+      })
+      .catch(error => {
+        console.log(error)
+      })
+  },
+
   computed: {
+    data () {
+      return [...this.viblo, ...this.ctf, ...this.code]
+    },
+
     counters () {
-      const counts = this.dataCounters
+      const counts = this.data
         .filter(counter => counter.count)
         .map(counter => counter.count)
       const maxCount = Math.max(...counts)
       const minCount = Math.min(...counts)
       const aveCount = (maxCount + minCount) / 2
-      return this.dataCounters.map(counter => {
+      return this.data.map(counter => {
         if (!counter.rate) {
           counter.widthPercent = counter.count / aveCount
         } else {
