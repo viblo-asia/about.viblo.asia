@@ -28,7 +28,7 @@
             <div class="text-white ml-4 flex items-center">
               <div
                 class="font-bold text-white mr-2 inline-block w-20 text-center flex-shrink-0"
-                v-if="counter.count"
+                v-if="counter.count || counter.count == 0"
               >
                 <NumberCount :numberCount="counter.count" />
               </div>
@@ -53,13 +53,15 @@ import Intersect from 'vue-intersect'
 import EventBus from '@/includes/event-bus'
 import TitleSection from './TitleSection'
 
+axios.defaults.timeout = 5000
+
 export default {
   data () {
     return {
       fullWidth: false,
-      viblo: [],
-      ctf: [],
-      code: []
+      viblo: {},
+      ctf: {},
+      code: {}
     }
   },
 
@@ -73,10 +75,24 @@ export default {
     axios
       .get(`${process.env.VUE_APP_VIBLO_API_URL}/api/about`)
       .then(res => {
-        this.viblo = res.data.data
+        this.viblo = res.data
       })
-      .catch(error => {
-        console.log(error)
+      .catch(() => {
+        this.viblo = {
+          activeUsers: 40438,
+          newUsersPerMonth: 1315,
+          publishedPosts: 25753,
+          tags: 9069,
+          interactivesOfUsers: 313805,
+          postsAreInteractive: 22672,
+          videos: 64,
+          pageviewsPerMonth: 1800000,
+          averageNewPostsInMonth: 939,
+          questionsHasAnswer: 87.11,
+          questions: 1153,
+          series: 577,
+          organizations: 48
+        }
       })
 
     axios
@@ -84,8 +100,10 @@ export default {
       .then(res => {
         this.code = res.data
       })
-      .catch(error => {
-        console.log(error)
+      .catch(() => {
+        this.code = {
+          usersPassToChallenge: 7.09
+        }
       })
 
     axios
@@ -93,14 +111,77 @@ export default {
       .then(res => {
         this.ctf = res.data
       })
-      .catch(error => {
-        console.log(error)
+      .catch(() => {
+        this.ctf = {
+          usersPassToChallenge: 20.93
+        }
       })
   },
 
   computed: {
     data () {
-      return [...this.viblo, ...this.ctf, ...this.code]
+      return [
+        {
+          name: 'Người dùng active',
+          count: this.viblo.activeUsers
+        },
+        {
+          name: 'Người dùng mới hàng tháng',
+          count: this.viblo.newUsersPerMonth
+        },
+        {
+          name: 'Bài viết được public',
+          count: this.viblo.publishedPosts
+        },
+        {
+          name: 'Tổng số tag',
+          count: this.viblo.tags
+        },
+        {
+          name: 'Lượt tương tác người dùng',
+          count: this.viblo.interactivesOfUsers
+        },
+        {
+          name: 'Bài viết được tương tác',
+          count: this.viblo.postsAreInteractive
+        },
+        {
+          name: 'Seminar videos',
+          count: this.viblo.videos
+        },
+        {
+          name: 'Pageview trung bình hàng tháng',
+          count: this.viblo.pageviewsPerMonth
+        },
+        {
+          name: 'Bài viết mới mỗi tháng',
+          count: this.viblo.averageNewPostsInMonth
+        },
+        {
+          name: 'Tổng số series được public',
+          count: this.viblo.series
+        },
+        {
+          name: 'Tổng số organization',
+          count: this.viblo.organizations
+        },
+        {
+          name: 'Tổng số câu hỏi',
+          count: this.viblo.questions
+        },
+        {
+          name: 'Số câu hỏi được trả lời',
+          rate: this.viblo.questionsHasAnswer
+        },
+        {
+          name: 'Người dùng vượt qua được challenge trên Viblo Code',
+          rate: this.code.usersPassToChallenge
+        },
+        {
+          name: 'Người dùng tìm được flag trên Viblo CTF',
+          rate: this.ctf.usersPassToChallenge
+        }
+      ]
     },
 
     counters () {
