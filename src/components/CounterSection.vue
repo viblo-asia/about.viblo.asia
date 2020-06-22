@@ -52,16 +52,19 @@ import NumberCount from './NumberCount.vue'
 import Intersect from 'vue-intersect'
 import EventBus from '@/includes/event-bus'
 import TitleSection from './TitleSection'
+import defaultStats from '@/data/counter-items'
 
 axios.defaults.timeout = 5000
+
+const getVibloStats = () => axios.get(`${process.env.VUE_APP_VIBLO_API_URL}/api/about`).then(r => r.data)
+const getCodeStats = () => axios.get(`${process.env.VUE_APP_CODE_API_URL}/api/about`).then(r => r.data)
+const getCTFStats = () => axios.get(`${process.env.VUE_APP_CTF_API_URL}/api/about`).then(r => r.data)
 
 export default {
   data () {
     return {
       fullWidth: false,
-      viblo: {},
-      ctf: {},
-      code: {}
+      ...defaultStats
     }
   },
 
@@ -71,51 +74,16 @@ export default {
     TitleSection
   },
 
-  mounted () {
-    axios
-      .get(`${process.env.VUE_APP_VIBLO_API_URL}/api/about`)
-      .then(res => {
-        this.viblo = res.data
-      })
-      .catch(() => {
-        this.viblo = {
-          activeUsers: 40438,
-          newUsersPerMonth: 1315,
-          publishedPosts: 25753,
-          tags: 9069,
-          interactivesOfUsers: 313805,
-          postsAreInteractive: 22672,
-          videos: 64,
-          pageviewsPerMonth: 1800000,
-          averageNewPostsInMonth: 939,
-          questionsHasAnswer: 87.11,
-          questions: 1153,
-          series: 577,
-          organizations: 48
-        }
-      })
+  async beforeMount () {
+    const [viblo, code, ctf] = await Promise.all([
+      getVibloStats().catch(() => defaultStats.viblo),
+      getCodeStats().catch(() => defaultStats.code),
+      getCTFStats().catch(() => defaultStats.ctf)
+    ])
 
-    axios
-      .get(`${process.env.VUE_APP_CODE_API_URL}/api/about`)
-      .then(res => {
-        this.code = res.data
-      })
-      .catch(() => {
-        this.code = {
-          usersPassToChallenge: 7.09
-        }
-      })
-
-    axios
-      .get(`${process.env.VUE_APP_CTF_API_URL}/api/about`)
-      .then(res => {
-        this.ctf = res.data
-      })
-      .catch(() => {
-        this.ctf = {
-          usersPassToChallenge: 20.93
-        }
-      })
+    this.viblo = viblo
+    this.code = code
+    this.ctf = ctf
   },
 
   computed: {

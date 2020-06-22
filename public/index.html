@@ -81,7 +81,9 @@
       function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
 
-      gtag('config', '<%= VUE_APP_GA_TRACKING_ID %>');
+      gtag('config', '<%= VUE_APP_GA_TRACKING_ID %>', {
+        'page_path': '/' + window.location.hostname,
+      });
     </script>
   </head>
   <body>
