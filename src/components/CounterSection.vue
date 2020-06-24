@@ -119,7 +119,7 @@ export default {
         },
         {
           name: 'Pageview trung bình hàng tháng',
-          count: 1900000
+          count: this.viblo.pageviewsPerMonth
         },
         {
           name: 'Bài viết mới mỗi tháng',
