@@ -23,7 +23,7 @@
               <strong>Viblo Platform</strong> là cộng đồng chia sẻ kiến thức
               và học tập về  công nghệ thông tin đang ngày một phát triển
               với hơn 40 nghìn thành viên đang hoạt động; Được quản lý và phát triển
-              bởi Viblo Team (thuộc Công ty cổ phần Sun Asterisk).
+              bởi Viblo Team.
             </p>
 
             <p class="my-3">
