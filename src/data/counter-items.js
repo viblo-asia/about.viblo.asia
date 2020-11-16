@@ -7,7 +7,7 @@ export default {
     interactivesOfUsers: 313805,
     postsAreInteractive: 22672,
     videos: 64,
-    pageviewsPerMonth: 1900000,
+    pageviewsPerMonth: 2000000,
     averageNewPostsInMonth: 939,
     questionsHasAnswer: 87.11,
     questions: 1153,
