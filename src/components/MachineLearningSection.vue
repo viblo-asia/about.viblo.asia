@@ -17,8 +17,8 @@
               người dùng, cũng như thúc đẩy hơn nữa sự phát triển của Viblo trong tương lai.</p>
 
             <p>Các ứng dụng sử dụng kỹ thuật Machine Learning của Viblo được publish tại
-              <a class="text-blue-400" href="https://machine-learning.viblo.asia">
-                https://machine-learning.viblo.asia
+              <a class="text-blue-400" href="https://ai.viblo.asia" target="blank">
+                https://ai.viblo.asia
               </a>.
             </p>
           </div>

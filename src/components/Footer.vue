@@ -7,7 +7,7 @@
           <div class="box-items">
             <div class="box-link"><a href="https://viblo.asia/organization-feature" target="_blank" rel="noopener noreferrer">Organization Feature</a></div>
             <div class="box-link"><a href="https://viblo.asia/questions" target="_blank" rel="noopener noreferrer">Questions & Answers</a></div>
-            <div class="box-link"><a href="https://machine-learning.viblo.asia/" target="_blank" rel="noopener noreferrer">Machine Learning System</a></div>
+            <div class="box-link"><a href="https://ai.viblo.asia/" target="_blank" rel="noopener noreferrer">Machine Learning System</a></div>
           </div>
         </div>
 
@@ -18,6 +18,7 @@
             <div class="box-link"><a href="https://code.viblo.asia/" target="_blank" rel="noopener noreferrer">Viblo Code</a></div>
             <div class="box-link"><a href="https://ctf.viblo.asia/" target="_blank" rel="noopener noreferrer">Viblo CTF</a></div>
             <div class="box-link"><a href="https://cv.viblo.asia/" target="_blank" rel="noopener noreferrer">Viblo CV</a></div>
+            <div class="box-link"><a href="https://learn.viblo.asia/" target="_blank" rel="noopener noreferrer">Viblo Learning</a></div>
             <div class="box-link"><a href="https://accounts.viblo.asia/" target="_blank" rel="noopener noreferrer">Viblo Accounts</a></div>
           </div>
         </div>
@@ -45,7 +46,7 @@
       </div>
       <hr class="my-4" style="border-top: 1px solid rgba(255, 255, 255, 0.2)" />
       <div class="copy flex justify-between">
-        <div class="copy-text z-10">© 2020 <strong>Viblo</strong>. All rights reserved.</div>
+        <div class="copy-text z-10">© 2021 <strong>Viblo</strong>. All rights reserved.</div>
         <div class="copy-link z-10">
           <a href="https://viblo.asia/feedback" class="mr-4">Feedback</a>
           <a href="https://viblo.asia/terms">Terms</a>
