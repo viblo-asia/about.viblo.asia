@@ -56,7 +56,7 @@ import defaultStats from '@/data/counter-items'
 
 axios.defaults.timeout = 5000
 
-const getVibloStats = () => axios.get(`${process.env.VUE_APP_VIBLO_API_URL}/about`).then(r => r.data)
+const getVibloStats = () => axios.get(`${process.env.VUE_APP_VIBLO_API_URL}/api/about`).then(r => r.data)
 const getCodeStats = () => axios.get(`${process.env.VUE_APP_CODE_API_URL}/api/about`).then(r => r.data)
 const getCTFStats = () => axios.get(`${process.env.VUE_APP_CTF_API_URL}/api/about`).then(r => r.data)
 
@@ -122,7 +122,7 @@ export default {
           count: this.viblo.pageviewsPerMonth
         },
         {
-          name: 'Bài viết mới mỗi tháng',
+          name: 'Bài viết publish mới mỗi tháng',
           count: this.viblo.averageNewPostsInMonth
         },
         {

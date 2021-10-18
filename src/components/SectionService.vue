@@ -23,7 +23,6 @@
               :class="index % 2 === 0 ? '' : 'md:order-last'"
             >
               <div class="images py-8 md:py-0 h-full">
-                <!-- <div class="image"><img :src="service.logo" :alt="service.title" /></div> -->
                 <div class="image h-full" v-for="image in service.images" :key="image">
                   <img :src="image" :alt="service.title" class="w-auto m-auto" />
                 </div>
@@ -39,7 +38,7 @@
             >
               <div class="logo">
                 <img
-                  class="inline-block max-w-full md:max-w-lg md:h-20"
+                  class="inline-block max-w-full md:h-20"
                   :src="service.logo"
                   :alt="service.title"
                 />
@@ -152,6 +151,9 @@ export default {
   }
   .service-item.v-cv .link .button {
     background-color: #f5861e;
+  }
+  .service-item.v-learn .link .button {
+    background-color: #fad20b;
   }
 }
 </style>
