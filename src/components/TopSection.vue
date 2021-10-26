@@ -28,20 +28,91 @@
 </template>
 
 <script>
+import axios from 'axios'
 import VueAos from 'vue-aos'
 import topItems from '@/data/top-items'
 import TitleSection from './TitleSection'
 
+axios.defaults.timeout = 5000
+
+const getVibloStats = () => axios.get(`${process.env.VUE_APP_VIBLO_API_URL}/api/about`).then(r => r.data)
+const getCodeStats = () => axios.get(`${process.env.VUE_APP_CODE_API_URL}/api/about`).then(r => r.data)
+const getCTFStats = () => axios.get(`${process.env.VUE_APP_CTF_API_URL}/api/about`).then(r => r.data)
+
 export default {
+
   data () {
     return {
-      topItems: topItems
+      topItems
     }
   },
 
   components: {
     VueAos,
     TitleSection
+  },
+
+  async beforeMount () {
+    const [viblo, code, ctf] = await Promise.all([
+      getVibloStats().catch(() => topItems),
+      getCodeStats().catch(() => topItems),
+      getCTFStats().catch(() => topItems)
+    ])
+    this.viblo = viblo
+    this.code = code
+    this.ctf = ctf
+    this.topItems = [
+      {
+        title: 'Người dùng có <strong>reputation</strong> cao nhất',
+        belongs: `${this.viblo.reputationMax.name} <small>@${this.viblo.reputationMax.username}<small/>`,
+        url: `https://viblo.asia/u/${this.viblo.reputationMax.username}`
+      },
+      {
+        title: 'Người dùng <strong>cao điểm nhất<strong> Viblo Code',
+        belongs: `${this.code.userHaveMostScore.name} <small>@${this.code.userHaveMostScore.username}<small/>`,
+        url: `https://code.viblo.asia/users/${this.code.userHaveMostScore.username}`
+      },
+      {
+        title: 'Hacker <strong>"bá đạo"</strong> nhất Viblo CTF',
+        belongs: `${this.ctf.userHasMostPoint.name} <small>@${this.ctf.userHasMostPoint.username}<small/>`,
+        url: `https://ctf.viblo.asia/users/${this.ctf.userHasMostPoint.username}`
+      },
+      {
+        title: 'Organization có nhiều <strong>bài viết</strong> nhất',
+        belongs: this.viblo.organizationPostCountMax.name,
+        url: `https://viblo.asia/o/${this.viblo.organizationPostCountMax.slug}`
+      },
+      {
+        title: 'Người dùng có nhiều <strong>bài viết</strong> nhất',
+        belongs: `${this.viblo.userPostCountMax.name} <small>@${this.viblo.userPostCountMax.username}</small>`,
+        url: `https://viblo.asia/u/${this.viblo.userPostCountMax.username}`
+      },
+      {
+        title: 'Bài viết được <strong>vote up</strong> nhiều nhất',
+        belongs: this.viblo.postVotesCountMax.title,
+        url: `https://viblo.asia/p/${this.viblo.postVotesCountMax.slug}`
+      },
+      {
+        title: 'Bài viết <strong>được xem</strong> nhiều nhất',
+        belongs: this.viblo.postViewsCountMax.title,
+        url: `https://viblo.asia/p/${this.viblo.postViewsCountMax.slug}`
+      },
+      {
+        title: 'Bài viết <strong>được clip</strong> nhiều nhất',
+        belongs: this.viblo.postClipsCountMax.title,
+        url: `https://viblo.asia/p/${this.viblo.postClipsCountMax.slug}`
+      },
+      {
+        title: '<strong>Tag</strong> được nhiều người dùng <strong>follow</strong> nhất',
+        belongs: this.viblo.tagFollowCountMax.name,
+        url: `https://viblo.asia/tags/${this.viblo.tagFollowCountMax.slug}`
+      },
+      {
+        title: '<strong>Tag</strong> có nhiều bài viết nhất',
+        belongs: this.viblo.tagPostsCountMax.name,
+        url: `https://viblo.asia/tags/${this.viblo.tagPostsCountMax.slug}`
+      }
+    ]
   }
 }
 </script>

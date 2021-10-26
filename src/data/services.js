@@ -42,5 +42,16 @@ export default [
     logo: require('../assets/cv-logo.svg'),
     link: 'https://cv.viblo.asia',
     images: [require('../assets/cv-image.png')]
+  },
+  {
+    title: 'Viblo Learn',
+    code: 'v-learn',
+    description:
+      'Dịch vụ cung cấp các bài luyện tập, bài kiểm tra với kho câu hỏi đa dạng,' +
+      ' hữu ích cho việc tự học và luyện thi các chứng chỉ IT hoàn toàn miễn phí.' +
+      ' Ngoài ra, bạn cũng có thể chia sẻ kiến thức của mình bằng đóng góp câu hỏi cho các bài thi trên hệ thống.',
+    logo: require('../assets/learn-logo.svg'),
+    link: 'https://learn.viblo.asia/',
+    images: [require('../assets/learn-image.svg')]
   }
 ]
