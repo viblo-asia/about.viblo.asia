@@ -47,24 +47,16 @@
 </template>
 
 <script>
-import axios from 'axios'
 import NumberCount from './NumberCount.vue'
 import Intersect from 'vue-intersect'
 import EventBus from '@/includes/event-bus'
 import TitleSection from './TitleSection'
-import defaultStats from '@/data/counter-items'
-
-axios.defaults.timeout = 5000
-
-const getVibloStats = () => axios.get(`${process.env.VUE_APP_VIBLO_API_URL}/api/about`).then(r => r.data)
-const getCodeStats = () => axios.get(`${process.env.VUE_APP_CODE_API_URL}/api/about`).then(r => r.data)
-const getCTFStats = () => axios.get(`${process.env.VUE_APP_CTF_API_URL}/api/about`).then(r => r.data)
+import { mapState } from 'vuex'
 
 export default {
   data () {
     return {
-      fullWidth: false,
-      ...defaultStats
+      fullWidth: false
     }
   },
 
@@ -74,19 +66,8 @@ export default {
     TitleSection
   },
 
-  async beforeMount () {
-    const [viblo, code, ctf] = await Promise.all([
-      getVibloStats().catch(() => defaultStats.viblo),
-      getCodeStats().catch(() => defaultStats.code),
-      getCTFStats().catch(() => defaultStats.ctf)
-    ])
-
-    this.viblo = viblo
-    this.code = code
-    this.ctf = ctf
-  },
-
   computed: {
+    ...mapState(['viblo', 'code', 'ctf']),
     data () {
       return [
         {
