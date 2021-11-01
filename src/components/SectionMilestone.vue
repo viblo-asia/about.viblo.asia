@@ -3,7 +3,7 @@
     <div class="max-w-full md:max-w-screen-xl m-auto">
       <TitleSection section_title='Viblo <span class="font-black">milestone</span>' />
       <div class="section-content pt-24 px-8 md:px-8 flex flex-wrap justify-between">
-        <div class="content-item w-full md:w-1/2 inline-block relative" v-for="(data, index) in milestoneItems" :key="index">
+        <div class="content-item w-full md:w-1/2 inline-block relative" v-for="(data, index) in viblo.listOfMilestones ? viblo.listOfMilestones : milestoneItems" :key="index">
           <div class="item-title text-white text-4xl inline-block relative mb-6">{{ data.date }}
             <template v-if="index % 2 === 0">
               <VueAos animation-class="bounceInLeft animated" :threshold="1"><span class="under-ruler"></span></VueAos>
@@ -22,14 +22,10 @@
 </template>
 
 <script>
-import axios from 'axios'
 import VueAos from 'vue-aos'
 import milestoneItems from '@/data/milestone-items'
 import TitleSection from './TitleSection'
-
-axios.defaults.timeout = 5000
-
-const getVibloStats = () => axios.get(`${process.env.VUE_APP_VIBLO_API_URL}/api/about`).then(r => r.data)
+import { mapState } from 'vuex'
 
 export default {
   data () {
@@ -43,13 +39,8 @@ export default {
     TitleSection
   },
 
-  async beforeMount () {
-    const [viblo] = await Promise.all([
-      getVibloStats().catch(() => milestoneItems)
-    ])
-    if (viblo.listOfMilestones) {
-      this.milestoneItems = viblo.listOfMilestones
-    }
+  computed: {
+    ...mapState(['viblo'])
   }
 }
 </script>
