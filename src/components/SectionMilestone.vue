@@ -3,7 +3,7 @@
     <div class="max-w-full md:max-w-screen-xl m-auto">
       <TitleSection section_title='Viblo <span class="font-black">milestone</span>' />
       <div class="section-content pt-24 px-8 md:px-8 flex flex-wrap justify-between">
-        <div class="content-item w-full md:w-1/2 inline-block relative" v-for="(data, index) in viblo.listOfMilestones ? viblo.listOfMilestones : milestoneItems" :key="index">
+        <div class="content-item w-full md:w-1/2 inline-block relative" v-for="(data, index) in viblo.listOfMilestones && viblo.listOfMilestones.length > 0 ? viblo.listOfMilestones : milestoneItems" :key="index">
           <div class="item-title text-white text-4xl inline-block relative mb-6">{{ data.date }}
             <template v-if="index % 2 === 0">
               <VueAos animation-class="bounceInLeft animated" :threshold="1"><span class="under-ruler"></span></VueAos>
