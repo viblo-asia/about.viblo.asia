@@ -5,7 +5,7 @@
         <div class="link-box">
           <div class="box-title">Resources</div>
           <div class="box-items">
-            <div class="box-link"><a href="https://viblo.asia/organization-feature" target="_blank" rel="noopener noreferrer">Organization Feature</a></div>
+            <div class="box-link"><a href="https://about.viblo.asia/organization-feature" target="_blank" rel="noopener noreferrer">Organization Feature</a></div>
             <div class="box-link"><a href="https://viblo.asia/questions" target="_blank" rel="noopener noreferrer">Questions & Answers</a></div>
             <div class="box-link"><a href="https://machine-learning.viblo.asia/" target="_blank" rel="noopener noreferrer">Machine Learning System</a></div>
           </div>
