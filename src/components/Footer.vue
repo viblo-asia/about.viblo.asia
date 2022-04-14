@@ -3,16 +3,17 @@
     <div class="mx-auto max-w-screen-xl px-4 py-12 md:py-24 z-10 text-sm text-blue-200">
       <div class="grid grid-cols-1 md:grid-cols-3 justify-between gap-6">
         <div class="link-box">
-          <div class="box-title">Resources</div>
+          <div class="box-title">{{$t('footer.resource.title')}}</div>
           <div class="box-items">
-            <div class="box-link"><a href="https://about.viblo.asia/organization-feature" target="_blank" rel="noopener noreferrer">Organization Feature</a></div>
-            <div class="box-link"><a href="https://viblo.asia/questions" target="_blank" rel="noopener noreferrer">Questions & Answers</a></div>
-            <div class="box-link"><a href="https://machine-learning.viblo.asia/" target="_blank" rel="noopener noreferrer">Machine Learning System</a></div>
+            <div class="box-link"><a href="https://about.viblo.asia/organization-feature" target="_blank" rel="noopener noreferrer">{{$t('footer.resource.organization')}}</a></div>
+            <div class="box-link"><a href="https://viblo.asia/questions" target="_blank" rel="noopener noreferrer">{{$t('footer.resource.questions_an')}}</a></div>
+            <div class="box-link"><a href="https://machine-learning.viblo.asia/" target="_blank" rel="noopener noreferrer">{{$t('footer.resource.machine_learn')}}</a></div>
+            <switch-language/>
           </div>
         </div>
 
         <div class="link-box">
-          <div class="box-title">Services</div>
+          <div class="box-title">{{$t('footer.services')}}</div>
           <div class="box-items">
             <div class="box-link"><a href="https://viblo.asia/" target="_blank" rel="noopener noreferrer">Viblo</a></div>
             <div class="box-link"><a href="https://code.viblo.asia/" target="_blank" rel="noopener noreferrer">Viblo Code</a></div>
@@ -24,7 +25,7 @@
         </div>
 
         <div class="link-box">
-          <div class="box-title">Contact Us</div>
+          <div class="box-title">{{$t('footer.contact_us')}}</div>
           <div class="box-items">
             <div class="box-link">
               <a href="mailto:contact@viblo.asia" target="_blank" rel="noopener noreferrer" class="flex items-center">
@@ -48,8 +49,8 @@
       <div class="copy flex justify-between">
         <div class="copy-text z-10">© 2021 <strong>Viblo</strong>. All rights reserved.</div>
         <div class="copy-link z-10">
-          <a href="https://viblo.asia/feedback" class="mr-4">Feedback</a>
-          <a href="https://viblo.asia/terms">Terms</a>
+          <a href="https://viblo.asia/feedback" class="mr-4">{{$t('footer.feedback')}}</a>
+          <a href="https://viblo.asia/terms">{{$t('footer.terms')}}</a>
         </div>
       </div>
     </div>
@@ -60,12 +61,14 @@
 import LogoGithubIcon from 'vue-ionicons/dist/logo-github'
 import LogoFacebookIcon from 'vue-ionicons/dist/logo-facebook'
 import MdMailIcon from 'vue-ionicons/dist/md-mail.vue'
+import switchLanguage from './switchLanguage'
 
 export default {
   components: {
     LogoGithubIcon,
     LogoFacebookIcon,
-    MdMailIcon
+    MdMailIcon,
+    switchLanguage
   }
 }
 </script>

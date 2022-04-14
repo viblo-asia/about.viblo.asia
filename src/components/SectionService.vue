@@ -5,7 +5,8 @@
   >
     <div class="md:max-w-screen-xl m-auto px-4">
       <VueAos animation-class="zoomIn animated" :threshold="1">
-        <TitleSection section_title="Our <span class='font-black'>services</span>" />
+        <TitleSection v-if="i18=='en'" section_title="Our <span class='font-black'>services</span>" />
+        <TitleSection v-else section_title="<span class='font-black'>Dịch vụ </span>của chúng tôi" />
       </VueAos>
       <div class="services-list text-white px-4">
         <div
@@ -50,6 +51,12 @@
 
               <div
                 class="description text-lg my-8 lg:my-16"
+                v-if="i18n == 'en'"
+                v-html="service.descriptionEn"
+              ></div>
+              <div
+                class="description text-lg my-8 lg:my-16"
+                v-else
                 v-html="service.description"
               ></div>
               <div class="link">
@@ -57,7 +64,7 @@
                   :href="service.link"
                   class="button rounded-full py-2 px-4 sm:px-16 inline-block"
                   target="_blank"
-                >Go to {{ service.title }}</a>
+                >{{$t('go_to')}} {{ service.title }}</a>
               </div>
             </div>
           </VueAos>
@@ -71,6 +78,7 @@
 import VueAos from 'vue-aos'
 import TitleSection from './TitleSection'
 import dataServices from '@/data/services'
+import { mapState } from 'vuex'
 
 export default {
   data: () => ({ dataServices }),
@@ -78,6 +86,9 @@ export default {
   components: {
     VueAos,
     TitleSection
+  },
+  computed: {
+    ...mapState(['i18n'])
   }
 }
 </script>

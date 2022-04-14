@@ -20,33 +20,27 @@
         <VueAos animation-class="fadeInLeft animated" :threshold="1">
           <div class="about-text text-justify">
             <p class="my-3">
-              <strong>Viblo Platform</strong> là cộng đồng chia sẻ kiến thức
-              và học tập về  công nghệ thông tin đang ngày một phát triển
-              với hơn 40 nghìn thành viên đang hoạt động; Được quản lý và phát triển
-              bởi Viblo Team.
+              <strong>Viblo Platform</strong> {{ $t('sectionAbout.citation1')}}
             </p>
 
             <p class="my-3">
-              Với nền móng là dịch vụ
+              {{ $t('sectionAbout.citation2.title')}}
               <a href="https://viblo.asia" class="underline" target="_blank" rel="noopener"><strong>Viblo</strong></a>
-              được ra mắt ngày 03.04.2015, bạn có thể viết và chia sẻ nội dung liên quan đến các vấn đề kỹ thuật như:
-              <strong>Development</strong> (chủ đề lập trình, infrastructure...),
-              <strong>Design</strong> (thiết kế trong quá trình sản xuất phần mềm),
-              <strong>QA</strong> (test, đảm bảo chất lượng dự án...),
-              <strong>Management</strong> (quản lý dự án).
+              {{$t('sectionAbout.citation2.intro')}}
+              <strong>Development</strong> {{$t('sectionAbout.citation2.develop')}}
+              <strong>Design</strong> {{$t('sectionAbout.citation2.design')}}
+              <strong>QA</strong> {{$t('sectionAbout.citation2.qa')}}
+              <strong>Management</strong> {{$t('sectionAbout.citation2.management')}}
             </p>
 
             <p class="my-3">
-              Từ năm 2019, Viblo mở rộng thêm những dịch vụ mới để trở thành
-              Viblo Platform bao gồm:
+              {{$t('sectionAbout.citation3.intro')}}
               <a href="https://code.viblo.asia" class="underline" target="_blank" rel="noopener"><strong>Viblo Code</strong></a>
-              (dịch vụ về luyện tập kỹ năng coding, giải thuật),
+              {{$t('sectionAbout.citation3.code')}}
               <a href="https://ctf.viblo.asia" class="underline" target="_blank" rel="noopener"><strong>Viblo CTF</strong></a>
-              (dịch vụ về luyện tập kỹ năng coding, an toàn thông tin) và
+              {{$t('sectionAbout.citation3.ctf')}}
               <a href="https://cv.viblo.asia" class="underline" target="_blank" rel="noopener"><strong>Viblo CV</strong></a>
-              (dịch vụ tạo các mẫu CV chuyên nghiệp dành cho lập trình viên)
-              với mong muốn vươn mình trở thành một nền tảng mở, đóng góp cho sự phát triển
-              của cộng đồng IT Việt Nam.
+              {{$t('sectionAbout.citation3.cv')}}
             </p>
           </div>
         </VueAos>

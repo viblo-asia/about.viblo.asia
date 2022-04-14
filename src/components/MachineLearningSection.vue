@@ -12,11 +12,9 @@
 
         <VueAos animation-class="zoomInRight animated">
           <div id="ml-intro" class="md:mt-12 mt-8 text-blue-100 max-w-lg text-justify">
-            <p>Viblo ứng dụng các kỹ thuật trong Machine Learning, Deep Learning và đặc biệt là
-              Natural Language Processing để giải quyết các vấn đề nhằm cải thiện trải nghiệm
-              người dùng, cũng như thúc đẩy hơn nữa sự phát triển của Viblo trong tương lai.</p>
+            <p>{{$t('machineLearning.citation1')}}</p>
 
-            <p>Các ứng dụng sử dụng kỹ thuật Machine Learning của Viblo được publish tại
+            <p>{{$t('machineLearning.citation2')}}
               <a class="text-blue-400" href="https://machine-learning.viblo.asia" target="blank">
                 https://machine-learning.viblo.asia
               </a>.

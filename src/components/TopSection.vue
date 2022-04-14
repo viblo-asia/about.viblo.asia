@@ -1,6 +1,7 @@
 <template>
   <section id="top-section" class="scrollspy py-16 md:py-32">
-    <TitleSection section_title="Sảnh danh vọng" />
+    <TitleSection v-if="i18n=='en'" section_title="Hall of Fame" />
+    <TitleSection v-else section_title="Sảnh danh vọng" />
 
     <div class="max-w-sm lg:max-w-screen-xl mx-auto lg:grid lg:grid-cols-2 mt-24">
       <div class="top-item" v-for="(item, index) in topItems" :key="index">
@@ -8,7 +9,8 @@
           <div class="item-container">
             <a :href="item.url" target="_blank" rel="noopener">
               <div class="hexagon">
-                <div class="hexagon-content" v-html="item.title" />
+                <div class="hexagon-content" v-if="i18n == 'en'" v-html="item.titleEn" />
+                <div class="hexagon-content" v-else v-html="item.title" />
               </div>
             </a>
             <div class="belongs-container">
@@ -47,7 +49,7 @@ export default {
   },
 
   computed: {
-    ...mapState(['viblo', 'code', 'ctf'])
+    ...mapState(['viblo', 'code', 'ctf', 'i18n'])
   },
 
   watch: {

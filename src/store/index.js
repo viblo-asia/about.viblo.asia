@@ -2,14 +2,14 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
 import defaultStats from '@/data/counter-items'
-
 Vue.use(Vuex)
 
 const storeData = {
   state: {
     viblo: defaultStats.viblo,
     code: defaultStats.code,
-    ctf: defaultStats.ctf
+    ctf: defaultStats.ctf,
+    i18n: 'vi'
   },
 
   actions: {
@@ -40,6 +40,9 @@ const storeData = {
 
     setDataCtf (state, data) {
       state.ctf = data
+    },
+    setI18 (state, data) {
+      state.i18n = data
     }
   }
 }

@@ -37,7 +37,7 @@
             :href="`#${item.code}`"
             class="menu-item block mt-4 xl:inline-block xl:mt-0 text-blue-200 hover:text-white mr-4 uppercase text-md"
           >
-            {{ item.title }}
+            {{ $t(item.title) }}
           </a>
         </div>
       </div>
@@ -66,6 +66,7 @@ export default {
   methods: {
     scrollTo (el = 'app') {
       document.getElementById(el).scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
+      console.log(this.dataMenu)
     }
   },
 
