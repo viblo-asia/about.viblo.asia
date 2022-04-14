@@ -9,7 +9,7 @@ const storeData = {
     viblo: defaultStats.viblo,
     code: defaultStats.code,
     ctf: defaultStats.ctf,
-    i18n: 'vi'
+    i18n: localStorage.getItem('i18n') || 'vi'
   },
 
   actions: {
