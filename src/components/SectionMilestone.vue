@@ -13,7 +13,8 @@
             </template>
           </div>
           <VueAos animation-class="zoomInUp animated" :threshold="1">
-            <div class="item-description" v-html="data.message" />
+            <div class="item-description" v-if ="i18n == 'en'" v-html="data.messageEn" />
+            <div class="item-description" v-else v-html="data.message" />
           </VueAos>
         </div>
       </div>
@@ -40,7 +41,7 @@ export default {
   },
 
   computed: {
-    ...mapState(['viblo'])
+    ...mapState(['viblo', 'i18n'])
   }
 }
 </script>

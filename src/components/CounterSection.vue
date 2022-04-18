@@ -1,6 +1,7 @@
 <template>
     <section id="counter-section" class="scrollspy py-16 md:py-32">
-      <TitleSection section_title="Những con số <span class='font-black'>ấn tượng</span>" />
+      <TitleSection v-if ="i18n == 'en'" section_title="<span class='font-black'>IMPRESSIVE </span>NUMBERS" />
+      <TitleSection v-else section_title="Những con số <span class='font-black'>ấn tượng</span>" />
       <div id="counter" class="flex flex-col pt-24">
         <div
           class="counter-item flex flex-1 flex-row"
@@ -38,7 +39,8 @@
               >
                 <NumberCount :numberCount="counter.rate" />%
               </div>
-              <div class="font-light text-blue-300 uppercase">{{ counter.name }}</div>
+              <div class="font-light text-blue-300 uppercase" v-if ="i18n == 'en'">{{ counter.nameEn }}</div>
+              <div class="font-light text-blue-300 uppercase" v-else>{{ counter.name }}</div>
             </div>
           </div>
         </div>
@@ -67,67 +69,82 @@ export default {
   },
 
   computed: {
-    ...mapState(['viblo', 'code', 'ctf']),
+    ...mapState(['viblo', 'code', 'ctf', 'i18n']),
     data () {
       return [
         {
           name: 'Người dùng active',
+          nameEn: 'Users active',
           count: this.viblo.activeUsers
         },
         {
           name: 'Người dùng mới hàng tháng',
+          nameEn: 'New users every month',
           count: this.viblo.newUsersPerMonth
         },
         {
           name: 'Bài viết được public',
+          nameEn: 'Posts are public',
           count: this.viblo.publishedPosts
         },
         {
           name: 'Tổng số tag',
+          nameEn: 'Total number of tags',
           count: this.viblo.tags
         },
         {
           name: 'Lượt tương tác người dùng',
+          nameEn: 'User interactions',
           count: this.viblo.interactivesOfUsers
         },
         {
           name: 'Bài viết được tương tác',
+          nameEn: 'Posts are interactive',
           count: this.viblo.postsAreInteractive
         },
         {
           name: 'Seminar videos',
+          nameEn: 'Seminar videos',
           count: this.viblo.videos
         },
         {
           name: 'Pageview trung bình hàng tháng',
+          nameEn: 'Monthly average pageview',
           count: this.viblo.pageviewsPerMonth
         },
         {
           name: 'Bài viết publish mới mỗi tháng',
+          nameEn: 'New published articles every month',
           count: this.viblo.averageNewPostsInMonth
         },
         {
           name: 'Tổng số series được public',
+          nameEn: 'Total number of series published',
           count: this.viblo.series
         },
         {
           name: 'Tổng số organization',
+          nameEn: 'Total number of organizations',
           count: this.viblo.organizations
         },
         {
           name: 'Tổng số câu hỏi',
+          nameEn: 'Total number of questions',
           count: this.viblo.questions
         },
         {
           name: 'Số câu hỏi được trả lời',
+          nameEn: 'Number of questions answered',
           rate: this.viblo.questionsHasAnswer
         },
         {
           name: 'Người dùng vượt qua được challenge trên Viblo Code',
+          nameEn: 'Users overcome the challenge on Viblo Code',
           rate: this.code.usersPassToChallenge
         },
         {
           name: 'Người dùng tìm được flag trên Viblo CTF',
+          nameEn: 'Users found flags on Viblo CTF',
           rate: this.ctf.usersPassToChallenge
         }
       ]
