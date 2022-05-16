@@ -5,7 +5,7 @@
   >
     <div class="md:max-w-screen-xl m-auto px-4">
       <VueAos animation-class="zoomIn animated" :threshold="1">
-        <TitleSection v-if="i18=='en'" section_title="Our <span class='font-black'>services</span>" />
+        <TitleSection v-if="i18n=='en'" section_title="Our <span class='font-black'>services</span>" />
         <TitleSection v-else section_title="<span class='font-black'>Dịch vụ </span>của chúng tôi" />
       </VueAos>
       <div class="services-list text-white px-4">

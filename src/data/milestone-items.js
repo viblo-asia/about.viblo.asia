@@ -11,7 +11,7 @@ const links = {
   ctf: renderLink('Viblo CTF', 'https://ctf.viblo.asia'),
   cv: renderLink('Viblo CV', 'https://cv.viblo.asia'),
   mayfest: renderLink('Viblo May Fest', 'https://mayfest.viblo.asia'),
-  birthday: renderLink('5 năm thành lập Viblo', 'https://5years.viblo.asia')
+  birthday: renderLink('https://5years.viblo.asia')
 }
 
 export default [
@@ -132,8 +132,8 @@ export default [
   },
   {
     date: '04.2020',
-    message: `Diễn ra Viblo Code Contest và Viblo CTF Contest mừng kỷ niệm ${links.birthday}`,
-    messageEn: `Viblo Code Contest and Viblo CTF Contest took place to celebrate ${links.birthday}`
+    message: `Diễn ra Viblo Code Contest và Viblo CTF Contest mừng kỷ niệm 5 năm thành lập Viblo ${links.birthday}`,
+    messageEn: `Viblo Code Contest and Viblo CTF Contest took place to celebrate Viblo's 5th anniversary ${links.birthday}`
   },
   {
     date: '01-31.05.2020',

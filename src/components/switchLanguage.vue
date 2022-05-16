@@ -1,7 +1,7 @@
 <template>
     <div class="mt-16 h-8 flex flex-row " id="switchLanguage">
       <span>
-        <img v-if ="i18n == 'en'" src="../assets/en-flag-32x48.png" class="h-6 mr-2" alt="">
+        <img v-if ="$i18n.locale == 'en'" src="../assets/en-flag-32x48.png" class="h-6 mr-2" alt="">
         <img v-else src="../assets/vi-flag-32x48.png" class="h-6 mr-2" alt="">
         </span>
         <select class="bg-white h-6 text-black ml-9 w-1/2 rounded grow" v-model="$i18n.locale" @change="onChange">
@@ -41,6 +41,7 @@ export default {
   methods: {
     onChange () {
       this.$store.commit('setI18', this.$i18n.locale)
+      localStorage.setItem('i18n', this.$i18n.locale)
     }
   }
 }
