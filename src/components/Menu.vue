@@ -66,7 +66,6 @@ export default {
   methods: {
     scrollTo (el = 'app') {
       document.getElementById(el).scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
-      console.log(this.dataMenu)
     }
   },
 
