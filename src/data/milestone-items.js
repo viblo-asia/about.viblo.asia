@@ -18,7 +18,7 @@ export default [
   {
     date: '10.2014',
     message: `Dự án ${links.viblo} (Vietnam IT Blog) được khởi động với mục đích tạo ra một cộng đồng nơi thành viên có thể chia sẻ, học hỏi kiến thức Công nghệ thông tin bằng tiếng mẹ đẻ.`,
-    messageEn: `Project ${links.viblo} (Vietnam IT Blog) was started with the aim of creating a community where members can share and learn Information Technology knowledge in their mother tongue.`
+    messageEn: `Project ${links.viblo} (Vietnam IT Blog) was launched with the aim of creating a community where members can share and learn Information Technology knowledge in their mother tongue.`
   },
   {
     date: '03.11.2014',
@@ -58,7 +58,7 @@ export default [
   {
     date: '08.08.2017',
     message: `Ra mắt tính năng ${links.qa}, giúp người dùng đặt câu hỏi để nhận được trợ giúp từ thành viên khác.`,
-    messageEn: `Launched the ${links.qa} feature, allowing users to ask questions to get help from other members.`
+    messageEn: `Launched the ${links.qa} feature, helping users ask questions to get help from other users.`
   },
   {
     date: '26.11.2017',
@@ -68,7 +68,7 @@ export default [
   {
     date: '23.04.2018',
     message: `Ra mắt ứng dụng ${links.app} trên 2 nền tảng Android & iOS, giúp người dùng có thể dễ dàng tiếp cận với nguồn kiến thức phong phú được chia sẻ trên Viblo hàng ngày.`,
-    messageEn: `Launching ${links.app} application on 2 platforms Android & iOS, making it easy for users to access the rich knowledge shared on Viblo every day.`
+    messageEn: `Launching ${links.app} application on Android & iOS platforms, helping users easily access the rich knowledge shared on Viblo every day.`
   },
   {
     date: '28.05.2018',
@@ -88,7 +88,7 @@ export default [
   {
     date: '24.09.2018',
     message: `Ra mắt chuyên trang giới thiệu về các dịch vụ sử dụng Machine Learning của Viblo, tại địa chỉ ${links.machineLearning}, đồng thời thông báo về định hướng ứng dụng Machine Learning trong việc cải thiện trải nghiệm người dùng tại Viblo trong thời gian tới.`,
-    messageEn: `Launched a special page about Viblo's Machine Learning services, at ${links.machineLearning}, and announced the direction of Machine Learning application in improving user experience at Viblo in the meantime. next time.`
+    messageEn: `Launching a special page about Viblo's Machine Learning services, at ${links.machineLearning}, and announcing the direction of Machine Learning application in improving user experience used at Viblo in the near future.`
   },
   {
     date: '25.09.2018',
@@ -103,7 +103,7 @@ export default [
   {
     date: '20.02.2019',
     message: 'Ra mắt chức năng "Organization" trên Viblo, giúp các team, công ty có thể chia sẻ về những sứ mệnh, tầm nhìn và những kinh nghiệm làm việc của mình trong ngành IT.',
-    messageEn: 'Launching the "Organization" function on Viblo, helping teams and companies share their missions, visions and working experiences in the IT industry.'
+    messageEn: 'Launching the "Organization" function on Viblo, helping teams and companies share their missions, visions and working experiences in the IT industry.          '
   },
   {
     date: '11.03.2019',
@@ -133,11 +133,11 @@ export default [
   {
     date: '04.2020',
     message: `Diễn ra Viblo Code Contest và Viblo CTF Contest mừng kỷ niệm 5 năm thành lập Viblo ${links.birthday}`,
-    messageEn: `Viblo Code Contest and Viblo CTF Contest took place to celebrate Viblo's 5th anniversary ${links.birthday}`
+    messageEn: `Viblo Code Contest and Viblo CTF Contest took place to celebrate the 5th anniversary of Viblo's establishment ${links.birthday}`
   },
   {
     date: '01-31.05.2020',
     message: `Diễn ra sự kiện ${links.mayfest} - Lễ hội chia sẻ kiến thức về công nghệ thông tin`,
-    messageEn: `Event ${links.mayfest} - Information technology knowledge sharing festival`
+    messageEn: `Event ${links.mayfest} - Information technology knowledge sharing festival takes place`
   }
 ]
