@@ -74,32 +74,32 @@ export default {
       return [
         {
           name: 'Người dùng active',
-          nameEn: 'Users active',
+          nameEn: 'ACTIVE USERS',
           count: this.viblo.activeUsers
         },
         {
           name: 'Người dùng mới hàng tháng',
-          nameEn: 'New users every month',
+          nameEn: 'NEW USERS MONTHLY',
           count: this.viblo.newUsersPerMonth
         },
         {
           name: 'Bài viết được public',
-          nameEn: 'Posts are public',
+          nameEn: 'PUBLIC ARTICLES',
           count: this.viblo.publishedPosts
         },
         {
           name: 'Tổng số tag',
-          nameEn: 'Total number of tags',
+          nameEn: 'TOTAL TAG',
           count: this.viblo.tags
         },
         {
           name: 'Lượt tương tác người dùng',
-          nameEn: 'User interactions',
+          nameEn: 'USER INTERACTIVITY',
           count: this.viblo.interactivesOfUsers
         },
         {
           name: 'Bài viết được tương tác',
-          nameEn: 'Posts are interactive',
+          nameEn: 'INTERACTIVE ARTICLES ',
           count: this.viblo.postsAreInteractive
         },
         {
@@ -109,42 +109,42 @@ export default {
         },
         {
           name: 'Pageview trung bình hàng tháng',
-          nameEn: 'Monthly average pageview',
+          nameEn: 'AVERAGE PAGEVIEW MONTHLY',
           count: this.viblo.pageviewsPerMonth
         },
         {
           name: 'Bài viết publish mới mỗi tháng',
-          nameEn: 'New published articles every month',
+          nameEn: 'NEW PUBLISH ARTICLES MONTHLY',
           count: this.viblo.averageNewPostsInMonth
         },
         {
           name: 'Tổng số series được public',
-          nameEn: 'Total number of series published',
+          nameEn: 'TOTAL PUBLICED SERIES',
           count: this.viblo.series
         },
         {
           name: 'Tổng số organization',
-          nameEn: 'Total number of organizations',
+          nameEn: 'TOTAL ORGANIZATION',
           count: this.viblo.organizations
         },
         {
           name: 'Tổng số câu hỏi',
-          nameEn: 'Total number of questions',
+          nameEn: 'TOTAL QUESTIONS',
           count: this.viblo.questions
         },
         {
           name: 'Số câu hỏi được trả lời',
-          nameEn: 'Number of questions answered',
+          nameEn: 'ANSWERED QUESTIONS',
           rate: this.viblo.questionsHasAnswer
         },
         {
           name: 'Người dùng vượt qua được challenge trên Viblo Code',
-          nameEn: 'Users overcome the challenge on Viblo Code',
+          nameEn: 'USERS SOLVE CHALLENGE ON VIBLO CODE',
           rate: this.code.usersPassToChallenge
         },
         {
           name: 'Người dùng tìm được flag trên Viblo CTF',
-          nameEn: 'Users found flags on Viblo CTF',
+          nameEn: 'USERS FIND FLAG ON VIBLO CTF',
           rate: this.ctf.usersPassToChallenge
         }
       ]

@@ -58,52 +58,62 @@ export default {
         {
           title: 'Người dùng có <strong>reputation</strong> cao nhất',
           belongs: `${this.viblo.reputationMax.name} <small>@${this.viblo.reputationMax.username}<small/>`,
-          url: `https://viblo.asia/u/${this.viblo.reputationMax.username}`
+          url: `https://viblo.asia/u/${this.viblo.reputationMax.username}`,
+          titleEn: 'User with the highest <strong>reputation</strong>'
         },
         {
           title: 'Người dùng <strong>cao điểm nhất<strong> Viblo Code',
           belongs: `${this.code.userHaveMostScore.name} <small>@${this.code.userHaveMostScore.username}<small/>`,
-          url: `https://code.viblo.asia/users/${this.code.userHaveMostScore.username}`
+          url: `https://code.viblo.asia/users/${this.code.userHaveMostScore.username}`,
+          titleEn: '<strong>USER HAS HIGHEST POINTS<strong> ON VIBLO CODE Viblo Code'
         },
         {
           title: 'Hacker <strong>"bá đạo"</strong> nhất Viblo CTF',
           belongs: `${this.ctf.userHasMostPoint.name} <small>@${this.ctf.userHasMostPoint.username}<small/>`,
-          url: `https://ctf.viblo.asia/users/${this.ctf.userHasMostPoint.username}`
+          url: `https://ctf.viblo.asia/users/${this.ctf.userHasMostPoint.username}`,
+          titleEn: '<strong>"BEST"</strong> Hacker Viblo CTF'
         },
         {
           title: 'Organization có nhiều <strong>bài viết</strong> nhất',
           belongs: this.viblo.organizationPostCountMax.name,
-          url: `https://viblo.asia/o/${this.viblo.organizationPostCountMax.slug}`
+          url: `https://viblo.asia/o/${this.viblo.organizationPostCountMax.slug}`,
+          titleEn: 'Organization has the most <strong>articles</strong>'
         },
         {
           title: 'Người dùng có nhiều <strong>bài viết</strong> nhất',
           belongs: `${this.viblo.userPostCountMax.name} <small>@${this.viblo.userPostCountMax.username}</small>`,
-          url: `https://viblo.asia/u/${this.viblo.userPostCountMax.username}`
+          url: `https://viblo.asia/u/${this.viblo.userPostCountMax.username}`,
+          titleEn: 'Users has the most <strong>ARTICLES</strong>'
         },
         {
           title: 'Bài viết được <strong>vote up</strong> nhiều nhất',
           belongs: this.viblo.postVotesCountMax.title,
-          url: `https://viblo.asia/p/${this.viblo.postVotesCountMax.slug}`
+          url: `https://viblo.asia/p/${this.viblo.postVotesCountMax.slug}`,
+          titleEn: 'Article has the most <strong>votes</strong>'
         },
         {
           title: 'Bài viết <strong>được xem</strong> nhiều nhất',
           belongs: this.viblo.postViewsCountMax.title,
-          url: `https://viblo.asia/p/${this.viblo.postViewsCountMax.slug}`
+          url: `https://viblo.asia/p/${this.viblo.postViewsCountMax.slug}`,
+          titleEn: 'articles has the <strong>most viewes</strong> '
         },
         {
           title: 'Bài viết <strong>được clip</strong> nhiều nhất',
           belongs: this.viblo.postClipsCountMax.title,
-          url: `https://viblo.asia/p/${this.viblo.postClipsCountMax.slug}`
+          url: `https://viblo.asia/p/${this.viblo.postClipsCountMax.slug}`,
+          titleEn: 'Article has the <strong>most bookmarks</strong>'
         },
         {
           title: '<strong>Tag</strong> được nhiều người dùng <strong>follow</strong> nhất',
           belongs: this.viblo.tagFollowCountMax.name,
-          url: `https://viblo.asia/tags/${this.viblo.tagFollowCountMax.slug}`
+          url: `https://viblo.asia/tags/${this.viblo.tagFollowCountMax.slug}`,
+          titleEn: '<strong>Tag</strong>has the most follow <strong>follow</strong>'
         },
         {
           title: '<strong>Tag</strong> có nhiều bài viết nhất',
           belongs: this.viblo.tagPostsCountMax.name,
-          url: `https://viblo.asia/tags/${this.viblo.tagPostsCountMax.slug}`
+          url: `https://viblo.asia/tags/${this.viblo.tagPostsCountMax.slug}`,
+          titleEn: '<strong>Tag</strong> has THE MOST POSTINGS'
         }
       ]
     }
