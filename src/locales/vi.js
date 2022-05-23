@@ -19,8 +19,8 @@ const vi = {
     }
   },
   machineLearning: {
-    citation1: 'Viblo ứng dụng các kỹ thuật trong Machine Learning, Deep Learning và đặc biệt là' +
-    'Natural Language Processing để giải quyết các vấn đề nhằm cải thiện trải nghiệm' +
+    citation1: 'Viblo ứng dụng các kỹ thuật trong Machine Learning, Deep Learning và đặc biệt là ' +
+    'Natural Language Processing để giải quyết các vấn đề nhằm cải thiện trải nghiệm ' +
     'người dùng, cũng như thúc đẩy hơn nữa sự phát triển của Viblo trong tương lai.',
     citation2: 'Các ứng dụng sử dụng kỹ thuật Machine Learning của Viblo được publish tại'
   },

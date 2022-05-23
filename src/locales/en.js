@@ -18,7 +18,7 @@ const en = {
     }
   },
   machineLearning: {
-    citation1: 'Viblo applies techniques in Machine Learning, Deep Learning and especially Natural Language Processing to solve problems to improve user experience,' +
+    citation1: 'Viblo applies techniques in Machine Learning, Deep Learning and especially Natural Language Processing to solve problems to improve user experience, ' +
     "as well as further promote Viblo's development in the future.",
     citation2: "Applications using Viblo's Machine Learning techniques are published at https://machine-learning.viblo.asia."
   },
