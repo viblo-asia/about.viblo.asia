@@ -6,7 +6,7 @@
     <div class="about-image md:order-last w-full md:w-1/2 md:z-20 relative">
       <VueAos animation-class="zoomInRight animated" :threshold="0.5">
         <div class="max-w-3xl">
-          <img src="../assets/viblo app.png" alt="section about" class="m-auto max-w-full" />
+          <img :src="getUrl()" alt="section about" class="m-auto max-w-full" />
         </div>
       </VueAos>
     </div>
@@ -15,33 +15,10 @@
     >
       <div class="px-8 md:py-8 md:transform max-w-xl m-auto">
         <VueAos animation-class="fadeInLeft animated" :threshold="1">
-          <h1 class="uppercase text-white text-5xl font-black">Viblo Platform</h1>
+          <h1 class="uppercase text-white text-5xl font-black">{{ viblo.introduction.title }}</h1>
         </VueAos>
         <VueAos animation-class="fadeInLeft animated" :threshold="1">
-          <div class="about-text text-justify">
-            <p class="my-3">
-              <strong>Viblo Platform</strong> {{ $t('sectionAbout.citation1')}}
-            </p>
-
-            <p class="my-3">
-              {{ $t('sectionAbout.citation2.title')}}
-              <a href="https://viblo.asia" class="underline" target="_blank" rel="noopener"><strong>Viblo</strong></a>
-              {{$t('sectionAbout.citation2.intro')}}
-              <strong>Development</strong> {{$t('sectionAbout.citation2.develop')}}
-              <strong>Design</strong> {{$t('sectionAbout.citation2.design')}}
-              <strong>QA</strong> {{$t('sectionAbout.citation2.qa')}}
-              <strong>Management</strong> {{$t('sectionAbout.citation2.management')}}
-            </p>
-
-            <p class="my-3">
-              {{$t('sectionAbout.citation3.intro')}}
-              <a href="https://code.viblo.asia" class="underline" target="_blank" rel="noopener"><strong>Viblo Code</strong></a>
-              {{$t('sectionAbout.citation3.code')}}
-              <a href="https://ctf.viblo.asia" class="underline" target="_blank" rel="noopener"><strong>Viblo CTF</strong></a>
-              {{$t('sectionAbout.citation3.ctf')}}
-              <a href="https://cv.viblo.asia" class="underline" target="_blank" rel="noopener"><strong>Viblo CV</strong></a>
-              {{$t('sectionAbout.citation3.cv')}}
-            </p>
+          <div class="about-text text-justify" v-html="markdownToHtml">
           </div>
         </VueAos>
       </div>
@@ -51,10 +28,29 @@
 
 <script>
 import VueAos from 'vue-aos'
+import { mapState } from 'vuex'
+import dataIntroduction from '@/data/introduction'
+import { marked } from 'marked'
 
 export default {
+  data: () => ({ dataIntroduction }),
   components: {
     VueAos
+  },
+
+  computed: {
+    ...mapState(['viblo', 'i18n']),
+    markdownToHtml () {
+      if (this.i18n === 'en') {
+        return marked(this.viblo.introduction.descriptionEn)
+      }
+      return marked(this.viblo.introduction.description)
+    }
+  },
+  methods: {
+    getUrl () {
+      return process.env.VUE_APP_IMAGE_URL + '/' + this.viblo.introduction.image
+    }
   }
 }
 </script>

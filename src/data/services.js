@@ -11,7 +11,7 @@ export default [
     " to get help from Viblo's own user community",
     logo: require('../assets/logo.svg'),
     link: 'https://viblo.asia',
-    images: [require('../assets/viblo-poster.png')]
+    image: require('../assets/viblo-poster.png')
   },
   {
     title: 'Viblo Code',
@@ -23,7 +23,7 @@ export default [
       ' challenging problems on algorithm and code optimization of Viblo.',
     logo: require('../assets/code-logo.png'),
     link: 'https://code.viblo.asia',
-    images: [require('../assets/code-image.png')]
+    image: require('../assets/code-image.png')
   },
   {
     title: 'Viblo CTF',
@@ -39,7 +39,7 @@ export default [
       ' Join Viblo CTF to try it out now!',
     logo: require('../assets/ctf-logo.png'),
     link: 'https://ctf.viblo.asia',
-    images: [require('../assets/ctf-image.png')]
+    image: require('../assets/ctf-image.png')
   },
   {
     title: 'Viblo CV',
@@ -53,7 +53,7 @@ export default [
       ' Viblo CV absolutely does not sell, or share user data with recruiting companies.',
     logo: require('../assets/cv-logo.svg'),
     link: 'https://cv.viblo.asia',
-    images: [require('../assets/cv-image.png')]
+    image: require('../assets/cv-image.png')
   },
   {
     title: 'Viblo Learn',
@@ -67,6 +67,6 @@ export default [
       ' In addition, you can also share your knowledge by contributing questions to the tests on the system.',
     logo: require('../assets/learn-logo.svg'),
     link: 'https://learn.viblo.asia/',
-    images: [require('../assets/learn-image.svg')]
+    image: require('../assets/learn-image.svg')
   }
 ]
