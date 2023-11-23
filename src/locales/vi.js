@@ -2,7 +2,7 @@ const vi = {
   viblo_gt: 'Nền tảng cơ bản để học hỏi và chia sẻ kiến thức CNTT',
   sectionAbout: {
 
-    citation1: 'là cộng đồng chia sẻ kiến thức và học tập về  công nghệ thông tin đang ngày một phát triển với hơn 40 nghìn thành viên đang hoạt động; Được quản lý và phát triển bởi Viblo Team.',
+    citation1: 'là cộng đồng chia sẻ kiến thức và học tập về  công nghệ thông tin đang ngày một phát triển với hơn 120 nghìn thành viên đang hoạt động; Được quản lý và phát triển bởi Viblo Team.',
     citation2: {
       title: 'Với nền móng là dịch vụ',
       intro: 'được ra mắt ngày 03.04.2015, bạn có thể viết và chia sẻ nội dung liên quan đến các vấn đề kỹ thuật như:',
@@ -14,8 +14,12 @@ const vi = {
     citation3: {
       intro: 'Từ năm 2019, Viblo mở rộng thêm những dịch vụ mới để trở thành Viblo Platform bao gồm:',
       code: '(dịch vụ về luyện tập kỹ năng coding, giải thuật),',
-      ctf: '(dịch vụ về luyện tập kỹ năng coding, an toàn thông tin) và',
-      cv: '(dịch vụ tạo các mẫu CV chuyên nghiệp dành cho lập trình viên) với mong muốn vươn mình trở thành một nền tảng mở, đóng góp cho sự phát triển của cộng đồng IT Việt Nam.'
+      ctf: '(dịch vụ về luyện tập kỹ năng coding, an toàn thông tin),',
+      cv: '(dịch vụ tạo các mẫu CV chuyên nghiệp dành cho lập trình viên),',
+      learn: '(công cụ hỗ trợ quá trình tự học và luyện thi các chứng chỉ IT),',
+      battle: '(nền tảng thi đấu đối kháng qua hình thức viết code),',
+      partner: '(dịch vụ cung cấp các chương trình hợp tác giữa Viblo và các đối tác đang làm việc trong lĩnh vực công nghệ) và',
+      interview: '(nền tảng xã hội chia sẻ các câu hỏi và câu trả lời phỏng vấn trong lĩnh vực CNTT) với mong muốn vươn mình trở thành một nền tảng mở, đóng góp cho sự phát triển của cộng đồng IT Việt Nam.'
     }
   },
   machineLearning: {

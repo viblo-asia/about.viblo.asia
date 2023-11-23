@@ -35,7 +35,7 @@
             v-for="(item, index) in dataMenu"
             :key="index"
             :href="`#${item.code}`"
-            class="menu-item block mt-4 xl:inline-block xl:mt-0 text-blue-200 hover:text-white mr-4 uppercase text-md"
+            class="menu-item block mt-4 xl:inline-block xl:mt-0 text-blue-200 hover:text-white mr-8 uppercase text-md"
           >
             {{ $t(item.title) }}
           </a>
