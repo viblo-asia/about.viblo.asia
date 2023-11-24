@@ -10,7 +10,7 @@
       </VueAos>
       <div class="services-list text-white px-4">
         <div
-          v-for="(service, index) in viblo.listOfServices"
+          v-for="(service, index) in dataServices"
           :key="index"
           :class="service.code"
           class="service-item py-20 md:py-16 flex flex-row items-center relative"
@@ -24,8 +24,8 @@
               :class="index % 2 === 0 ? '' : 'md:order-last'"
             >
               <div class="images py-8 md:py-0 h-full">
-                <div class="image h-full">
-                  <img :src="getUrl(service.image)" :alt="service.title" class="w-auto m-auto" />
+                <div class="image h-full" v-for="image in service.images" :key="image">
+                  <img :src="image" :alt="service.title" class="w-auto m-auto" />
                 </div>
               </div>
             </div>
@@ -40,7 +40,7 @@
               <div class="logo">
                 <img
                   class="inline-block max-w-full md:h-20"
-                  :src="getUrl(service.logo)"
+                  :src="service.logo"
                   :alt="service.title"
                 />
               </div>
@@ -87,13 +87,8 @@ export default {
     VueAos,
     TitleSection
   },
-  methods: {
-    getUrl (url) {
-      return process.env.VUE_APP_IMAGE_URL + '/' + url
-    }
-  },
   computed: {
-    ...mapState(['viblo', 'i18n'])
+    ...mapState(['i18n'])
   }
 }
 </script>
@@ -170,6 +165,15 @@ export default {
   }
   .service-item.v-learn .link .button {
     background-color: #fad20b;
+  }
+  .service-item.v-battle .link .button {
+    background-color: #da6624;
+  }
+  .service-item.v-interview .link .button {
+    background-color: #377dff;
+  }
+  .service-item.v-partner .link .button {
+    background-color: #5488c7;
   }
 }
 </style>

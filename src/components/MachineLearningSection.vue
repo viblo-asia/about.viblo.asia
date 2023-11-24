@@ -3,7 +3,7 @@
     <div id="ml-container"
       class="relative max-w-screen-xl mx-auto h-full flex items-center justify-center md:justify-end">
       <VueAos animation-class="zoomInLeft animated">
-        <div class="skull-background lg:flex-1" :style="{'background-image': `url(${getUrl()})`}"></div>
+        <div class="skull-background lg:flex-1"></div>
       </VueAos>
       <div class="flex flex-col items-end p-2 md:p-5 z-10 lg:flex-1">
         <VueAos animation-class="zoomInRight animated">
@@ -12,7 +12,13 @@
 
         <VueAos animation-class="zoomInRight animated">
           <div id="ml-intro" class="md:mt-12 mt-8 text-blue-100 max-w-lg text-justify">
-            <div v-html="markdownToHtml"></div>
+            <p>{{$t('machineLearning.citation1')}}</p>
+
+            <p>{{$t('machineLearning.citation2')}}
+              <a class="text-blue-400" href="https://machine-learning.viblo.asia" target="blank">
+                https://machine-learning.viblo.asia
+              </a>.
+            </p>
           </div>
         </VueAos>
       </div>
@@ -23,31 +29,11 @@
 <script>
 import VueAos from 'vue-aos'
 import TitleSection from './TitleSection'
-import dataMachineLearning from '@/data/machine-learning'
-import { mapState } from 'vuex'
-import { marked } from 'marked'
 
 export default {
-  data: () => ({ dataMachineLearning }),
   components: {
     VueAos,
     TitleSection
-  },
-
-  computed: {
-    ...mapState(['viblo', 'i18n']),
-    markdownToHtml () {
-      if (this.i18n === 'en') {
-        return marked(this.viblo.machineLearning.descriptionEn)
-      }
-      return marked(this.viblo.machineLearning.description)
-    }
-  },
-
-  methods: {
-    getUrl () {
-      return process.env.VUE_APP_IMAGE_URL + '/' + this.viblo.machineLearning.image
-    }
   }
 }
 </script>
