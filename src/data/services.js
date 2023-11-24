@@ -59,7 +59,7 @@ export default [
     description: 'Viblo Partner là dịch vụ cung cấp các chương trình hợp tác giữa Viblo và các đối tác đang làm việc trong lĩnh vực công nghệ, giúp các đối tác của Viblo có thể tương tác với cộng đồng công nghệ lớn, nâng cao giá trị thương hiệu cá nhân và tổ chức của mình trong cộng đồng.',
     descriptionEn: 'Viblo Partner is a service provided cooperation programs between Viblo and partners working in the technology field, helping Viblo partners interact with the large technology community, enhance personal and organizational brand value in the community.',
     logo: require('../assets/logo-viblo-partner.svg'),
-    link: 'https://battle.viblo.asia/',
+    link: 'https://partner.viblo.asia/',
     images: [require('../assets/viblo-partner.png')]
   },
   {
