@@ -39,14 +39,6 @@ export default {
     MachineLearningSection,
     CounterSection
 
-  },
-
-  async beforeMount () {
-    await Promise.all([
-      this.$store.dispatch('getVibloStats'),
-      this.$store.dispatch('getCodeStats'),
-      this.$store.dispatch('getCtfStats')
-    ])
   }
 }
 </script>

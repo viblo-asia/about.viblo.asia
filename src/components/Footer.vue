@@ -47,7 +47,7 @@
       </div>
       <hr class="my-4" style="border-top: 1px solid rgba(255, 255, 255, 0.2)" />
       <div class="copy flex justify-between">
-        <div class="copy-text z-10">© 2022 <strong>Viblo</strong>. All rights reserved.</div>
+        <div class="copy-text z-10">© {{yearNow}} <strong>Viblo</strong>. All rights reserved.</div>
         <div class="copy-link z-10">
           <a href="https://viblo.asia/feedback" class="mr-4">{{$t('footer.feedback')}}</a>
           <a href="https://viblo.asia/terms">{{$t('footer.terms')}}</a>
@@ -58,6 +58,7 @@
 </template>
 
 <script>
+import * as sntp from '../libs/sntp'
 import LogoGithubIcon from 'vue-ionicons/dist/logo-github'
 import LogoFacebookIcon from 'vue-ionicons/dist/logo-facebook'
 import MdMailIcon from 'vue-ionicons/dist/md-mail.vue'
@@ -69,6 +70,13 @@ export default {
     LogoFacebookIcon,
     MdMailIcon,
     switchLanguage
+  },
+
+  computed: {
+    yearNow () {
+      const date = new Date(sntp.now())
+      return date.getFullYear()
+    }
   }
 }
 </script>
